@@ -1,0 +1,44 @@
+{
+  "name": "nuxt-bootstrap-icons",
+  "version": "1.0.0",
+  "description": "Just a simple integration for Bootstrap Icons",
+  "repository": "https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons.git",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "release": "npm run lint  && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "setup": "tsc --module es2020 setup.ts && node setup.js && npm run lint",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.10.5",
+    "@nuxt/kit": "^3.6.1"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^0.6.4",
+    "@nuxt/eslint-config": "^0.1.1",
+    "@nuxt/module-builder": "^0.4.0",
+    "@nuxt/schema": "^3.6.1",
+    "@types/node": "^20.3.2",
+    "changelogen": "^0.5.3",
+    "eslint": "^8.43.0",
+    "nuxt": "^3.6.1",
+    "typescript": "^5.1.5"
+  }
+}
