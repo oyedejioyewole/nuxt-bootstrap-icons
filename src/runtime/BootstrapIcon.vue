@@ -7,5 +7,8 @@ defineProps<{
 </script>
 
 <template>
-  <i class="bi" :class="`bi-${name}`" />
+  <i
+    class="bi"
+    :class="`bi-${name}`"
+  />
 </template>
