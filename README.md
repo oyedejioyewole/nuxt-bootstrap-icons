@@ -7,14 +7,13 @@
 Just a simple integration for [Bootstrap Icons](https://icons.getbootstrap.com)
 
 - [✨ Release Notes](/CHANGELOG.md)
-- [🏀 Online playground](https://stackblitz.com/github/your-org/nuxt-bootstrap-icons?file=playground%2Fapp.vue)
+- [🏀 Online playground](https://stackblitz.com/edit/nuxt-starter-7kiqrj?file=playground%2Fapp.vue)
 - [📖 Documentation](https://icons.getboostrap.com)
 
 ## Features
 
-- ✨ Auto-importing of icons
-- 💤 Lazy loading of icon components (optional)
-- 🎨 Customizable rendering modes for icons &mdash; `inline` or `component`
+- A <`BootstrapIcon` /> component (the name can be changed) &mdash; this renders the icons
+- Different rendering modes for the icons &mdash; `inline` and `component`
 
 ## Setup
 
@@ -49,14 +48,21 @@ export default defineNuxtConfig({
 There are 2 ways of rendering icons:
 
 1. `inline` rendering:
-   In this, you choose the icon to display using the name prop, for example:
+   In this, you choose the icon to display using a name prop, for example:
+
    ```vue
-   <template><BootstrapIcon name="xbox" /></template>
+   <template>
+     <BootstrapIcon name="xbox" />
+   </template>
    ```
+
 2. `component` rendering:
-   Here the components are prefixed with `BootstrapIcon` and the name of the icon, for example:
+   Here the components are prefixed with **BootstrapIcon** and the name of the icon, for example:
+
    ```vue
-   <template><BootstrapIconXbox /></template>
+   <template>
+     <BootstrapIconXbox />
+   </template>
    ```
 
 That's it! You can now use `nuxt-bootstrap-icons` in your Nuxt app ✨
@@ -65,25 +71,25 @@ That's it! You can now use `nuxt-bootstrap-icons` in your Nuxt app ✨
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Setup/sync icon components
-npm run setup
+pnpm setup
 
 # Generate type stubs
-npm run dev:prepare
+pnpm dev:prepare
 
 # Develop with the playground
-npm run dev
+pnpm dev
 
 # Build the playground
-npm run dev:build
+pnpm dev:build
 
 # Run ESLint
-npm run lint
+pnpm lint
 
 # Release new version
-npm run release
+pnpm release
 ```
 
 <!-- Badges -->
