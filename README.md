@@ -4,7 +4,7 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-Just a simple integration for [Bootstrap Icons](https://icons.getbootstrap.com)
+Just a simple integration for `bootstrap-icons`
 
 - [✨ Release Notes](/CHANGELOG.md)
 - [🏀 Online playground](https://stackblitz.com/edit/nuxt-starter-7kiqrj?file=playground%2Fapp.vue)
