@@ -24,21 +24,21 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "release": "npm run lint && npm run prepack && changelogen --release && git push --follow-tags",
     "setup": "tsc --module es2020 setup.ts && node setup.js && npm run lint",
-    "lint": "eslint ."
+    "lint": "eslint . --fix"
   },
   "dependencies": {
-    "bootstrap-icons": "^1.10.5",
-    "@nuxt/kit": "^3.6.1"
+    "@nuxt/kit": "^3.6.2",
+    "bootstrap-icons": "^1.10.5"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^0.6.4",
+    "@nuxt/devtools": "^0.6.7",
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxt/module-builder": "^0.4.0",
-    "@nuxt/schema": "^3.6.1",
-    "@types/node": "^20.3.2",
-    "changelogen": "^0.5.3",
-    "eslint": "^8.43.0",
-    "nuxt": "^3.6.1",
-    "typescript": "^5.1.5"
+    "@nuxt/schema": "^3.6.2",
+    "@types/node": "^20.4.0",
+    "changelogen": "^0.5.4",
+    "eslint": "^8.44.0",
+    "nuxt": "^3.6.2",
+    "typescript": "^5.1.6"
   }
 }
