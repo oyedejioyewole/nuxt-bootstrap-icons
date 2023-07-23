@@ -24,7 +24,7 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "release": "npm run lint && npm run prepack && changelogen --release && git push --follow-tags",
     "setup": "tsc --module es2020 setup.ts && node setup.js && npm run lint",
-    "lint": "eslint . --fix --quiet"
+    "lint": "eslint . --fix"
   },
   "dependencies": {
     "@nuxt/kit": "^3.6.5",
