@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.0.2
+
+[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.0.1...v1.0.2)
+
+### 🏡 Chore
+
+- **package:** Edited scripts ([b84ad1c](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/b84ad1c))
+- **package:** Edited scripts" ([7b2d0c5](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/7b2d0c5))
+
+### ❤️  Contributors
+
+- OyewoleOyedeji
+
 ## v1.0.1
 
 [compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.0.0...v1.0.1)
