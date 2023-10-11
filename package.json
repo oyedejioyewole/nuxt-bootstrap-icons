@@ -1,6 +1,6 @@
 {
   "name": "nuxt-bootstrap-icons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Just a simple integration for Bootstrap Icons",
   "repository": "https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons.git",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "release": "npm run lint && npm run prepack && changelogen --release && git push --follow-tags",
+    "release": "npm run prepack && changelogen --release && git push --follow-tags",
     "setup": "tsc --module es2020 setup.ts && node setup.js && npm run lint",
     "lint": "eslint . --fix"
   },

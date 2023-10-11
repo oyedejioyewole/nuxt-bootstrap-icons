@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.0.3
+
+[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.0.2...v1.0.3)
+
+### 🏡 Chore
+
+- **devDependencies:** Bumped [@types/node, changelogen, @nuxt/devtools, +1] ([ede7896](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/ede7896))
+- **dependencies:** Bumped bootstrap-icons to 1.11.1 ([383c90d](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/383c90d))
+
+### ❤️ Contributors
+
+- OyewoleOyedeji
+
 ## v1.0.2
 
 [compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.0.1...v1.0.2)
