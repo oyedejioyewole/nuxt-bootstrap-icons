@@ -20,7 +20,6 @@ export default defineNuxtConfig({
     "notivue/nuxt",
     "nuxt-bootstrap-icons",
     "nuxt-og-image",
-    "@formkit/auto-animate/nuxt",
     "@nuxt/content",
     "@nuxtjs/google-fonts",
     "@nuxtjs/tailwindcss",

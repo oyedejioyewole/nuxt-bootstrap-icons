@@ -32,12 +32,11 @@ function generateIcons() {
 
 <template>
   <header
-    class="mx-auto grid h-screen w-[90%] select-none place-content-center gap-y-20 lg:w-3/4"
+    class="mx-auto grid h-screen w-[90%] place-content-center gap-y-20 lg:w-3/4"
   >
-    <h1
-      class="bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 bg-clip-text text-center font-serif text-5xl text-transparent lg:text-7xl"
-    >
-      Bootstrap Icons meets Nuxt
+    <h1 class="font-serif text-5xl text-primary-900 lg:text-7xl">
+      <span class="text-primary-500">Bootstrap Icons</span> meets
+      <span class="text-primary-500">Nuxt</span>
     </h1>
 
     <!-- Icon grid -->
@@ -53,8 +52,8 @@ function generateIcons() {
       </div>
     </div>
 
-    <!-- Try now -->
     <div class="flex flex-col justify-between gap-y-4 lg:flex-row">
+      <!-- Copy code -->
       <button
         class="flex w-full items-center justify-center gap-x-2 rounded-lg bg-primary-300 py-3 text-sm text-primary-900 lg:w-3/4 lg:gap-x-4"
         @click="copyToClipboard(($event.target as HTMLElement).innerText)"
@@ -63,11 +62,13 @@ function generateIcons() {
         <code>pnpm add -D nuxt-bootstrap-icons</code>
       </button>
 
+      <!-- Go to release notes -->
       <NuxtLink
         class="flex w-full items-center justify-center gap-x-2 rounded-full border border-primary-500 p-3 text-primary-500 transition hover:bg-primary-500 hover:text-primary-100 lg:w-[200px] lg:justify-around lg:gap-x-0"
         to="/release-notes"
-        >Release Notes <BootstrapIcon class="text-xl" name="arrow-right"
-      /></NuxtLink>
+      >
+        Release Notes <BootstrapIcon class="text-xl" name="arrow-right" />
+      </NuxtLink>
     </div>
   </header>
 </template>

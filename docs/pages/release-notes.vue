@@ -14,8 +14,9 @@ defineOgImageComponent(
     <NuxtLink
       to="/"
       class="flex w-fit items-center gap-x-2 rounded-full border border-primary-500 p-3 text-primary-500 transition hover:bg-primary-500 hover:text-primary-100"
-      ><BootstrapIcon class="text-xl" name="arrow-left" /> Go back</NuxtLink
     >
+      <BootstrapIcon class="text-xl" name="arrow-left" /> Go back
+    </NuxtLink>
     <ContentDoc class="space-y-8" id="release-notes" path="/release-notes" />
   </main>
 </template>

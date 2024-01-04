@@ -20,8 +20,7 @@ defineProps<{ title: string; description: string }>();
           );
         "
       >
-        <!-- <BootstrapIcon icon-name="bootstrap" /> -->
-        <!-- <PhosphorIconPhosphorLogo size="100" /> -->
+        <BootstrapIcon name="bootstrap" />
       </div>
     </div>
   </div>

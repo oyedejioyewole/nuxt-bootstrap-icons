@@ -15,7 +15,7 @@ export interface ModuleOptions {
    * Choose how you want to register and display components
    *
    * @default 'inline'
-   * @link https://nuxt-bootstrap-icons.vercel.app
+   * @link https://nuxt-bootstrap-icons.vercel.app#display
    */
   display: "inline" | "component";
 
@@ -23,6 +23,7 @@ export interface ModuleOptions {
    * Enable to register components globally
    *
    * @default false
+   * @link https://nuxt-bootstrap-icons.vercel.app#expose
    */
   expose: boolean;
 
@@ -30,12 +31,16 @@ export interface ModuleOptions {
    * The prefix of the component names
    *
    * @default "bootstrap-icon" or "BootstrapIcon"
+   * @link https://nuxt-bootstrap-icons.vercel.app#prefix
    */
   prefix: string;
 
   /**
    * Enable to generate a virtual file with the list
    * of registered components at `#build/nuxt-bootstrap-icons.json`
+   *
+   * @default false
+   * @link https://nuxt-bootstrap-icons.vercel.app#showlist
    */
   showList: boolean;
 }

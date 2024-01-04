@@ -14,9 +14,9 @@ defineOgImageComponent(
 
 const theme: NotivueTheme = {
   ...pastelTheme,
-  "--nv-success-accent": colors.primary[600],
+  "--nv-success-accent": colors.primary[900],
   "--nv-success-bg": colors.primary[300],
-  "--nv-success-fg": colors.primary[600],
+  "--nv-success-fg": colors.primary[900],
 };
 </script>
 
@@ -42,7 +42,7 @@ const theme: NotivueTheme = {
   }
 
   code {
-    @apply rounded-lg bg-primary-500 px-3 py-1 text-sm;
+    @apply rounded-lg bg-primary-300 px-3 py-1 text-sm;
   }
 
   h1,
@@ -69,7 +69,7 @@ const theme: NotivueTheme = {
     @apply text-xl font-bold lg:text-2xl;
 
     code {
-      @apply rounded-lg bg-primary-500 p-3;
+      @apply rounded-lg bg-primary-400 p-3;
     }
   }
 
