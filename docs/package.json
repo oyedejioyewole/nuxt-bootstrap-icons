@@ -17,14 +17,14 @@
     "@vueuse/nuxt": "^10.7.1",
     "nuxt": "^3.9.0",
     "nuxt-bootstrap-icons": "workspace:^",
-    "nuxt-og-image": "3.0.0-rc.13",
-    "sass": "^1.69.6",
-    "vue": "^3.4.3",
+    "nuxt-og-image": "3.0.0-rc.21",
+    "sass": "^1.69.7",
+    "vue": "^3.4.5",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
     "@bobthered/tailwindcss-palette-generator": "^3.2.3",
-    "notivue": "^2.0.1"
+    "notivue": "^2.1.1"
   },
   "optionalDependencies": {
     "prettier": "^3.1.1",

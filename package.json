@@ -21,13 +21,13 @@
     "dist"
   ],
   "scripts": {
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && tsc --module nodenext setup.ts && node setup.js && pnpm lint",
     "docs:build": "pnpm --filter docs build",
     "docs:dev": "pnpm --filter docs dev",
     "lint": "eslint . --fix",
     "playground:build": "pnpm --filter playground build",
     "playground:dev": "pnpm --filter playground dev",
     "playground:generate": "pnpm --filter playground generate",
-    "postinstall": "nuxt-module-build build --stub && nuxt-module-build prepare && tsc --module nodenext setup.ts && node setup.js && pnpm lint",
     "prepack": "nuxt-module-build build",
     "release:major": "pnpm lint && pnpm prepack && changelogen --release --major --output docs/content/release-notes.md && git push --follow-tags",
     "release:minor": "pnpm lint && pnpm prepack && changelogen --release --minor --output docs/content/release-notes.md && git push --follow-tags",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.9.0",
-    "bootstrap-icons": "^1.11.2"
+    "bootstrap-icons": "^1.11.3"
   },
   "devDependencies": {
     "@nuxt/devtools": "1.0.6",

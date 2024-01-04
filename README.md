@@ -52,7 +52,8 @@ or locally for either
 
 1. Clone the repository
 2. Install dependencies with `pnpm install`
-3. Run development server with `pnpm docs:dev`
+3. Setup module for development with `pnpm dev:prepare`
+4. Run development server with `pnpm docs:dev`
 
 **Note:** Hosted on Vercel
 
@@ -64,7 +65,8 @@ or
 
 1. Clone the repository
 2. Install dependencies with `pnpm install`
-3. Run development server with `pnpm playground:dev`
+3. Setup module for development with `pnpm dev:prepare`
+4. Run development server with `pnpm playground:dev`
 
 <!-- Badges -->
 
