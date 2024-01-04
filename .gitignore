@@ -56,5 +56,8 @@ Temporary Items
 .apdisk
 
 
-# All compiled Typescript files
-*.js
+# Compiled setup file
+setup.js
+
+# Generated components
+src/runtime/components/library

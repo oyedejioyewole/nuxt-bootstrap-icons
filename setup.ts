@@ -1,36 +1,47 @@
-import {
-  readdirSync,
-  writeFileSync,
-  mkdirSync,
-  existsSync,
-  readFileSync,
-} from "fs";
-import { join } from "path";
+import { existsSync, mkdirSync, readFile, readdirSync, writeFile } from "fs";
+import { join, resolve, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const paths = {
-  icons: join("./node_modules/bootstrap-icons/icons"),
-  components: join("./src/runtime/components"),
+  template: resolve(__dirname, "./src/templates/_icon.vue"),
+  icons: resolve(__dirname, "node_modules/bootstrap-icons/icons"),
+  components: resolve(__dirname, "src/runtime/components/library"),
 };
 
 if (!existsSync(paths.components)) mkdirSync(paths.components);
 
-const bootstrapIcons = readdirSync(paths.icons) as string[];
+const rawIcons: string[] = readdirSync(paths.icons);
+const formattedIcons = rawIcons.map((icon) =>
+  icon
+    .split("-")
+    .map((word) => word.at(0)?.toUpperCase() + word.slice(1))
+    .join("")
+    .replace("svg", "vue")
+);
 
-for (const icon of bootstrapIcons) {
-  writeFileSync(
-    join(
-      paths.components,
-      icon
-        .split("-")
-        .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
-        .join("")
-        .replace(".svg", ".vue")
-    ),
-    `<template>
-  ${readFileSync(join(paths.icons, icon)).toString()}
-</template>`,
-    { encoding: "utf-8" }
-  );
-}
+readFile(paths.template, (error, data) => {
+  if (error) throw error;
 
-console.log(`[INFO] Done generating icons from ${paths.icons}`);
+  const template = data.toString();
+
+  rawIcons.forEach((icon, index) => {
+    readFile(join(paths.icons, icon), (error, data) => {
+      if (error) throw error;
+
+      const content = data.toString();
+
+      writeFile(
+        join(paths.components, formattedIcons[index]),
+        template.replace("$", content),
+        { encoding: "utf-8" },
+        (error) => {
+          if (error) throw error;
+        }
+      );
+    });
+  });
+});
+
+console.info("[INFO] Icons have been generated!");

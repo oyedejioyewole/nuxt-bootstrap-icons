@@ -1,7 +1,10 @@
+<script lang="ts" setup>
+import iconList from "#build/nuxt-bootstrap-icons.json";
+</script>
+
 <template>
   <div>
-    I want an <BootstrapIcon name="xbox" /> to run on
-    <BootstrapIcon name="ubuntu" />
+    {{ iconList }}
   </div>
 </template>
 
