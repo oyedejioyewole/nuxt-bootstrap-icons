@@ -4,93 +4,65 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-Just a simple integration for `bootstrap-icons`
+Just a simple integration for [Bootstrap Icons](https://icons.getbootstrap.com) in [Nuxt](https://nuxt.com)
 
-- [✨ Release Notes](/CHANGELOG.md)
-- [🏀 Online playground](https://stackblitz.com/edit/nuxt-starter-7kiqrj?file=playground%2Fapp.vue)
-- [📖 Documentation](https://icons.getboostrap.com)
+- [✨ &nbsp;Release Notes](https://nuxt-bootstrap-icons.vercel.app/release-notes)
+- [🏀 Online playground][playground-href]
+- [📖 &nbsp;Documentation](https://nuxt-bootstrap-icons.vercel.app)
 
-## Features
-
-- A <`BootstrapIcon` /> component (the name can be changed) &mdash; this renders the icons
-- Different rendering modes for the icons &mdash; `inline` and `component`
-
-## Setup
+## Quick Setup
 
 1. Add `nuxt-bootstrap-icons` dependency to your project
 
-```bash
-# Using pnpm
-pnpm add -D nuxt-bootstrap-icons
+   ```bash
+   # Using pnpm
+   pnpm add -D nuxt-bootstrap-icons
 
-# Using yarn
-yarn add --dev nuxt-bootstrap-icons
+   # Using yarn
+   yarn add --dev nuxt-bootstrap-icons
 
-# Using npm
-npm install --save-dev nuxt-bootstrap-icons
-```
+   # Using npm
+   npm install --save-dev nuxt-bootstrap-icons
+   ```
 
 2. Add `nuxt-bootstrap-icons` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
   modules: ["nuxt-bootstrap-icons"],
-
-  // Optionally, customize the way of rendering icons
-  bootstrapIcons: {
-    renderType: "component", // or 'inline' (which is the default)
-  },
 });
 ```
 
-## Usage
-
-There are 2 ways of rendering icons:
-
-1. `inline` rendering:
-   In this, you choose the icon to display using a name prop, for example:
-
-   ```vue
-   <template>
-     <BootstrapIcon name="xbox" />
-   </template>
-   ```
-
-2. `component` rendering:
-   Here the components are prefixed with **BootstrapIcon** and the name of the icon, for example:
-
-   ```vue
-   <template>
-     <BootstrapIconXbox />
-   </template>
-   ```
-
 That's it! You can now use `nuxt-bootstrap-icons` in your Nuxt app ✨
 
-## Development
+## Resources
 
-```bash
-# Install dependencies
-pnpm install
+1. **Documentation**: <https://nuxt-bootstrap-icons.vercel.app>
+2. **Bootstrap Icons**: <https://icons.getbootstrap.com>
 
-# Setup/sync icon components
-pnpm setup
+## Contributing
 
-# Generate type stubs
-pnpm dev:prepare
+You can contribute to this module with CodeSandbox:
 
-# Develop with the playground
-pnpm dev
+[![Edit OyewoleOyedeji/nuxt-bootstrap-icons/main][playground-src]][playground-href]
 
-# Build the playground
-pnpm dev:build
+or locally for either
 
-# Run ESLint
-pnpm lint
+### Documentation
 
-# Release new version
-pnpm release
-```
+1. Clone the repository
+2. Install dependencies with `pnpm install`
+3. Run development server with `pnpm docs:dev`
+
+**Note:** Hosted on Vercel
+
+[![Deploy with Vercel][vercel-src]][vercel-href]
+
+### Playground
+
+1. Clone the repository
+2. Install dependencies with `pnpm install`
+3. Run development server with `pnpm playground:dev`
 
 <!-- Badges -->
 
@@ -100,3 +72,7 @@ pnpm release
 [npm-downloads-href]: https://npmjs.com/package/nuxt-bootstrap-icons
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
+[playground-src]: https://codesandbox.io/static/img/play-codesandbox.svg
+[playground-href]: https://codesandbox.io/p/github/OyewoleOyedeji/nuxt-bootstrap-icons/main?embed=1&file=%2Fplayground%2Fapp.vue&showConsole=true
+[vercel-src]: https://vercel.com/button
+[vercel-href]: https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FOyewoleOyedeji%2Fnuxt-bootstrap-icons
