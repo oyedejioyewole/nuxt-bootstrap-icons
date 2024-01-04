@@ -58,6 +58,8 @@ or locally for either
 
 [![Deploy with Vercel][vercel-src]][vercel-href]
 
+or
+
 ### Playground
 
 1. Clone the repository
