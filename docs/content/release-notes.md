@@ -1,5 +1,22 @@
 # Release Notes
 
+## v1.1.1
+
+[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.0...v1.1.1)
+
+### 🩹 Fixes
+
+- Moved postinstall to dev:prepare script ([b5c4b9b](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/b5c4b9b))
+
+### 💅 Refactors
+
+- Updated README ([94bb812](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/94bb812))
+- Fixed grammar issues ([4307517](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/4307517))
+
+### ❤️ Contributors
+
+- OyewoleOyedeji
+
 ## v1.1.0
 
 [compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.0.3...v1.1.0)
