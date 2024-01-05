@@ -6,7 +6,7 @@ import {
   createResolver,
   defineNuxtModule,
 } from "@nuxt/kit";
-import { readdirSync } from "fs";
+import bootstrapIcons from "bootstrap-icons/font/bootstrap-icons.json" assert { type: "json" };
 import { join } from "path";
 
 // Module options TypeScript interface definition
@@ -66,8 +66,7 @@ export default defineNuxtModule<ModuleOptions>({
     // Resolve paths
     const paths = {
       components: await resolvePath("./runtime/components"),
-      source: await resolvePath("../node_modules/bootstrap-icons/icons"),
-      templates: await resolvePath("./templates"),
+      templates: await resolvePath("./runtime/templates"),
     };
 
     // Convert prefix to PascalCase
@@ -95,9 +94,7 @@ export default defineNuxtModule<ModuleOptions>({
       });
 
     // Get and format icon names
-    const icons = readdirSync(paths.source).map((icon) =>
-      icon.replace(".svg", ""),
-    );
+    const icons = Object.keys(bootstrapIcons);
 
     // Register template .json file (list of icon names)
     if (options.display === "component") {

@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const paths = {
-  template: resolve(__dirname, "./src/templates/_icon.vue"),
+  template: resolve(__dirname, "./src/runtime/templates/_icon.vue"),
   icons: resolve(__dirname, "node_modules/bootstrap-icons/icons"),
   components: resolve(__dirname, "src/runtime/components/library"),
 };
@@ -18,7 +18,7 @@ const formattedIcons = rawIcons.map((icon) =>
     .split("-")
     .map((word) => word.at(0)?.toUpperCase() + word.slice(1))
     .join("")
-    .replace("svg", "vue")
+    .replace("svg", "vue"),
 );
 
 readFile(paths.template, (error, data) => {
@@ -38,7 +38,7 @@ readFile(paths.template, (error, data) => {
         { encoding: "utf-8" },
         (error) => {
           if (error) throw error;
-        }
+        },
       );
     });
   });

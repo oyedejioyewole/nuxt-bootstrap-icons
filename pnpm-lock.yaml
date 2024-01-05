@@ -78,7 +78,7 @@ importers:
         specifier: ^3.9.0
         version: 3.9.0(@types/node@20.10.6)(eslint@8.56.0)(rollup@3.29.4)(sass@1.69.7)(typescript@5.3.3)(vite@5.0.10)
       nuxt-bootstrap-icons:
-        specifier: workspace:^
+        specifier: latest
         version: link:..
       nuxt-og-image:
         specifier: 3.0.0-rc.21
