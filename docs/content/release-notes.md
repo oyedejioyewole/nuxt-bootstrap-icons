@@ -1,5 +1,17 @@
 # Release Notes
 
+## v1.1.3
+
+[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.2...v1.1.3)
+
+### 🩹 Fixes
+
+- Resolved support issues with import assertion ([641735f](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/641735f))
+
+### ❤️ Contributors
+
+- OyewoleOyedeji
+
 ## v1.1.2
 
 [compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.1...v1.1.2)
