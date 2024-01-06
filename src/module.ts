@@ -99,26 +99,31 @@ export default defineNuxtModule<ModuleOptions>({
 
       const iconList: string[] = JSON.parse(data.toString());
 
-      // Register template .json file (list of icon names)
-      if (options.display === "component") {
-        const _icons = iconList.map((icon) =>
-          icon
-            .split("-")
-            .map((word) => word.at(0)?.toUpperCase() + word.slice(1))
-            .join(""),
-        );
+      /**
+       * If `options.showList` is enabled, register a
+       * template .json file (list of icon names)
+       */
+      if (options.showList) {
+        if (options.display === "component") {
+          const _icons = iconList.map((icon) =>
+            icon
+              .split("-")
+              .map((word) => word.at(0)?.toUpperCase() + word.slice(1))
+              .join(""),
+          );
 
-        addTemplate({
-          filename: "nuxt-bootstrap-icons.json",
-          getContents: () => JSON.stringify(_icons),
-          write: true,
-        });
-      } else
-        addTemplate({
-          filename: "nuxt-bootstrap-icons.json",
-          getContents: () => JSON.stringify(iconList),
-          write: true,
-        });
+          addTemplate({
+            filename: "nuxt-bootstrap-icons.json",
+            getContents: () => JSON.stringify(_icons),
+            write: true,
+          });
+        } else
+          addTemplate({
+            filename: "nuxt-bootstrap-icons.json",
+            getContents: () => JSON.stringify(iconList),
+            write: true,
+          });
+      }
     });
 
     addTypeTemplate({
