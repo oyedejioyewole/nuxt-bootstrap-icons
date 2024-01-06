@@ -6,8 +6,7 @@ import {
   createResolver,
   defineNuxtModule,
 } from "@nuxt/kit";
-import bootstrapIcons from "bootstrap-icons/font/bootstrap-icons.json" assert { type: "json" };
-import { join } from "path";
+import { readFile } from "fs";
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -61,12 +60,13 @@ export default defineNuxtModule<ModuleOptions>({
     showList: false,
   },
   async setup(options) {
-    const { resolvePath } = createResolver(import.meta.url);
+    const { resolve } = createResolver(import.meta.url);
 
     // Resolve paths
     const paths = {
-      components: await resolvePath("./runtime/components"),
-      templates: await resolvePath("./runtime/templates"),
+      components: resolve("./runtime/components"),
+      iconList: resolve("./runtime/bootstrap-icons.list.json"),
+      templates: resolve("./runtime/templates"),
     };
 
     // Convert prefix to PascalCase
@@ -84,42 +84,46 @@ export default defineNuxtModule<ModuleOptions>({
     if (options.display === "component")
       await addComponentsDir({
         global: options.expose,
-        path: join(paths.components, "library"),
+        path: resolve(paths.components, "library"),
         prefix: _prefix,
       });
     else if (options.display === "inline")
       await addComponent({
-        filePath: join(paths.components, "BootstrapIcon.vue"),
+        filePath: resolve(paths.components, "BootstrapIcon.vue"),
         name: _prefix,
       });
 
     // Get and format icon names
-    const icons = Object.keys(bootstrapIcons);
+    readFile(paths.iconList, (error, data) => {
+      if (error) throw error;
 
-    // Register template .json file (list of icon names)
-    if (options.display === "component") {
-      const _icons = icons.map((icon) =>
-        icon
-          .split("-")
-          .map((word) => word.at(0)?.toUpperCase() + word.slice(1))
-          .join(""),
-      );
+      const iconList: string[] = JSON.parse(data.toString());
 
-      addTemplate({
-        filename: "nuxt-bootstrap-icons.json",
-        getContents: () => JSON.stringify(_icons),
-        write: true,
-      });
-    } else
-      addTemplate({
-        filename: "nuxt-bootstrap-icons.json",
-        getContents: () => JSON.stringify(icons),
-        write: true,
-      });
+      // Register template .json file (list of icon names)
+      if (options.display === "component") {
+        const _icons = iconList.map((icon) =>
+          icon
+            .split("-")
+            .map((word) => word.at(0)?.toUpperCase() + word.slice(1))
+            .join(""),
+        );
+
+        addTemplate({
+          filename: "nuxt-bootstrap-icons.json",
+          getContents: () => JSON.stringify(_icons),
+          write: true,
+        });
+      } else
+        addTemplate({
+          filename: "nuxt-bootstrap-icons.json",
+          getContents: () => JSON.stringify(iconList),
+          write: true,
+        });
+    });
 
     addTypeTemplate({
       filename: "types/nuxt-bootstrap-icons.d.ts",
-      src: join(paths.templates, "_types.d.ts"),
+      src: resolve(paths.templates, "_types.d.ts"),
     });
   },
 });

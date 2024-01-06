@@ -59,5 +59,6 @@ Temporary Items
 # Compiled setup file
 setup.js
 
-# Generated components
+# Workspace generated files
 src/runtime/components/library
+src/runtime/bootstrap-icons.list.json
