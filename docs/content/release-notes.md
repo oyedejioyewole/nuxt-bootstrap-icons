@@ -1,5 +1,22 @@
 # Release Notes
 
+## v1.1.4
+
+[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.3...v1.1.4)
+
+### 🩹 Fixes
+
+- Resolved issues with virtual file creation ([7035ee0](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/7035ee0))
+- Resolved postinstall problems ([e8a09d6](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/e8a09d6))
+
+### 🏡 Chore
+
+- **docs:** Changed module specifier to 'latest' ([c273fbd](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/c273fbd))
+
+### ❤️ Contributors
+
+- OyewoleOyedeji
+
 ## v1.1.3
 
 [compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.2...v1.1.3)
