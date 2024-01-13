@@ -76,7 +76,7 @@ or
 [npm-downloads-href]: https://npmjs.com/package/nuxt-bootstrap-icons
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
-[playground-src]: https://codesandbox.io/static/img/play-codesandbox.svg
-[playground-href]: https://codesandbox.io/p/github/OyewoleOyedeji/nuxt-bootstrap-icons/main?embed=1&file=%2Fplayground%2Fapp.vue&showConsole=true
+[playground-src]: https://developer.stackblitz.com/img/open_in_stackblitz.svg
+[playground-href]: https://stackblitz.com/edit/nuxt-starter-7kiqrj?file=playground%2Fapp.vue
 [vercel-src]: https://vercel.com/button
 [vercel-href]: https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FOyewoleOyedeji%2Fnuxt-bootstrap-icons
