@@ -6,7 +6,7 @@ import {
   createResolver,
   defineNuxtModule,
 } from "@nuxt/kit";
-import { readFile } from "fs";
+import { readFile } from "fs/promises";
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -94,37 +94,35 @@ export default defineNuxtModule<ModuleOptions>({
       });
 
     // Get and format icon names
-    readFile(paths.iconList, (error, data) => {
-      if (error) throw error;
+    const iconList: string[] = JSON.parse(
+      (await readFile(paths.iconList)).toString(),
+    );
 
-      const iconList: string[] = JSON.parse(data.toString());
+    /**
+     * If `options.showList` is enabled, register a
+     * template .json file (list of icon names)
+     */
+    if (options.showList) {
+      if (options.display === "component") {
+        const _icons = iconList.map((icon) =>
+          icon
+            .split("-")
+            .map((word) => word.at(0)?.toUpperCase() + word.slice(1))
+            .join(""),
+        );
 
-      /**
-       * If `options.showList` is enabled, register a
-       * template .json file (list of icon names)
-       */
-      if (options.showList) {
-        if (options.display === "component") {
-          const _icons = iconList.map((icon) =>
-            icon
-              .split("-")
-              .map((word) => word.at(0)?.toUpperCase() + word.slice(1))
-              .join(""),
-          );
-
-          addTemplate({
-            filename: "nuxt-bootstrap-icons.json",
-            getContents: () => JSON.stringify(_icons),
-            write: true,
-          });
-        } else
-          addTemplate({
-            filename: "nuxt-bootstrap-icons.json",
-            getContents: () => JSON.stringify(iconList),
-            write: true,
-          });
-      }
-    });
+        addTemplate({
+          filename: "nuxt-bootstrap-icons.json",
+          getContents: () => JSON.stringify(_icons),
+          write: true,
+        });
+      } else
+        addTemplate({
+          filename: "nuxt-bootstrap-icons.json",
+          getContents: () => JSON.stringify(iconList),
+          write: true,
+        });
+    }
 
     addTypeTemplate({
       filename: "types/nuxt-bootstrap-icons.d.ts",
