@@ -42,7 +42,7 @@ That's it! You can now use `nuxt-bootstrap-icons` in your Nuxt app ✨
 
 ## Contributing
 
-You can contribute to this module with CodeSandbox:
+You can contribute to this module with StackBlitz:
 
 [![Edit OyewoleOyedeji/nuxt-bootstrap-icons/main][playground-src]][playground-href]
 
