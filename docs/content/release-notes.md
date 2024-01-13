@@ -1,5 +1,31 @@
 # Release Notes
 
+## v1.1.5
+
+[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.4...v1.1.5)
+
+### 🩹 Fixes
+
+- **docs:** Resolved ERR_PNPM_OUTDATED_LOCKFILE ([e1529b1](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/e1529b1))
+- **docs:** Quit using workspace version ([4650f7c](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/4650f7c))
+- Refactor faulty setup script ([b3c4504](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/b3c4504))
+- Resolved possible icon list resolve problem ([94ec221](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/94ec221))
+- Re-order commands in dev:prepare script ([2582a1d](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/2582a1d))
+
+### 💅 Refactors
+
+- Removed unnecessary colons ([7b69eeb](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/7b69eeb))
+- Removed unnecessary code ([0864cdc](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/0864cdc))
+
+### 🏡 Chore
+
+- **docs:** 😐 Changed module version specifier ([e453d7e](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/e453d7e))
+- Bumped devDependency versions ([bc1de2c](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/bc1de2c))
+
+### ❤️ Contributors
+
+- OyewoleOyedeji
+
 ## v1.1.4
 
 [compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.3...v1.1.4)
