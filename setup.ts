@@ -52,8 +52,8 @@ async function setup() {
     );
   });
 
-  console.info("[INFO]: 🎉 Icons have been generated!");
+  console.info("[INFO] 🎉 Icons have been generated!");
 }
 
-console.info("[INFO]: ✨ Setting up icons");
+console.info("[INFO] ✨ Setting up icons");
 setup();
