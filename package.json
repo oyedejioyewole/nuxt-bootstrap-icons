@@ -38,11 +38,11 @@
     "bootstrap-icons": "^1.11.3"
   },
   "devDependencies": {
-    "@nuxt/devtools": "1.0.6",
+    "@nuxt/devtools": "1.0.8",
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxt/module-builder": "^0.5.5",
     "@nuxt/schema": "^3.9.1",
-    "@types/node": "^20.10.6",
+    "@types/node": "^20.11.0",
     "changelogen": "^0.5.5",
     "eslint": "^8.56.0",
     "nuxt": "^3.9.1",
