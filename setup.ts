@@ -1,5 +1,5 @@
 import { existsSync } from "fs";
-import { mkdir, open, readFile, readdir, writeFile } from "fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "fs/promises";
 import { dirname, join, parse, resolve } from "path";
 import { fileURLToPath } from "url";
 
@@ -19,8 +19,6 @@ const paths = {
 async function setup() {
   // Create components directory if it doesn't exist
   if (!existsSync(paths.components)) await mkdir(paths.components);
-  else if (!existsSync(paths.icons.list))
-    await open(join(paths.icons.list), "w");
 
   const rawIcons: string[] = await readdir(paths.icons.source);
 
