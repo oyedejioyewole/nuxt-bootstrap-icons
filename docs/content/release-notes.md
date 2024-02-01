@@ -1,5 +1,24 @@
 # Release Notes
 
+## v1.1.6
+
+[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.5...v1.1.6)
+
+### 🚀 Enhancements
+
+- **docs:** 🎨 Added theme switcher to footer ([2087c6f](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/2087c6f))
+- 🍹 Enabled 'bundler' module resolution ([540048b](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/540048b))
+
+### 💅 Refactors
+
+- **README:** Updated playground link ([e332d46](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/e332d46))
+- **README:** Removed outdated information ([77f4df6](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/77f4df6))
+- **README:** Update playground links ([ec1d61a](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/ec1d61a))
+
+### ❤️ Contributors
+
+- OyewoleOyedeji
+
 ## v1.1.5
 
 [compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.4...v1.1.5)
