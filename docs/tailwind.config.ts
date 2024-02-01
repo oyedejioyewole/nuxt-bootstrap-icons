@@ -1,8 +1,9 @@
-import type { Config } from "tailwindcss";
 import { tailwindcssPaletteGenerator } from "@bobthered/tailwindcss-palette-generator";
+import type { Config } from "tailwindcss";
 
 export default {
   content: [],
+  darkMode: "class",
   theme: {
     extend: {
       colors: tailwindcssPaletteGenerator({

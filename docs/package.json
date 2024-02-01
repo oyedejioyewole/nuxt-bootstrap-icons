@@ -9,24 +9,25 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.10.0",
+    "@nuxt/content": "^2.11.0",
+    "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/google-fonts": "^3.1.3",
-    "@nuxtjs/tailwindcss": "^6.10.4",
-    "@vueuse/core": "^10.7.1",
-    "@vueuse/nuxt": "^10.7.1",
-    "nuxt": "^3.9.1",
+    "@nuxtjs/tailwindcss": "^6.11.2",
+    "@vueuse/core": "^10.7.2",
+    "@vueuse/nuxt": "^10.7.2",
+    "nuxt": "^3.10.0",
     "nuxt-bootstrap-icons": "workspace:^",
-    "nuxt-og-image": "3.0.0-rc.25",
-    "sass": "^1.69.7",
-    "vue": "^3.4.13",
+    "nuxt-og-image": "3.0.0-rc.37",
+    "sass": "^1.70.0",
+    "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
     "@bobthered/tailwindcss-palette-generator": "^3.2.3",
-    "notivue": "^2.1.1"
+    "notivue": "^2.2.0"
   },
   "optionalDependencies": {
-    "prettier": "^3.2.1",
+    "prettier": "^3.2.4",
     "prettier-plugin-tailwindcss": "^0.5.11"
   }
 }

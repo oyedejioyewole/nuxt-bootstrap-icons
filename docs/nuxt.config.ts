@@ -1,5 +1,9 @@
 export default defineNuxtConfig({
-  bootstrapIcons: { expose: true, showList: true },
+  bootstrapIcons: {
+    expose: true,
+    showList: true,
+  },
+  colorMode: { classSuffix: "" },
   content: {
     defaultLocale: "en-US",
     highlight: {
@@ -17,13 +21,14 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    "notivue/nuxt",
-    "nuxt-bootstrap-icons",
-    "nuxt-og-image",
     "@nuxt/content",
+    "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
+    "notivue/nuxt",
+    "nuxt-bootstrap-icons",
+    "nuxt-og-image",
   ],
   notivue: {
     position: "bottom-center",

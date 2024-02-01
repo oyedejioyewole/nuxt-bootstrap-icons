@@ -2,9 +2,10 @@
 import iconList from "#build/nuxt-bootstrap-icons.json";
 
 const { data: icons, refresh } = useAsyncData(async () => generateIcons());
-const { copy } = useClipboard({ legacy: true });
 
 useIntervalFn(refresh, 5000);
+
+const { copy } = useClipboard({ legacy: true });
 
 async function copyToClipboard(text: string) {
   await copy(text);
@@ -34,7 +35,7 @@ function generateIcons() {
   <header
     class="mx-auto grid h-screen w-[90%] place-content-center gap-y-20 lg:w-3/4"
   >
-    <h1 class="font-serif text-5xl text-primary-900 lg:text-7xl">
+    <h1 class="font-serif text-5xl lg:text-7xl">
       <span class="text-primary-500">Bootstrap Icons</span> meets
       <span class="text-primary-500">Nuxt</span>
     </h1>
@@ -44,7 +45,7 @@ function generateIcons() {
       class="will-change-content grid grid-cols-2 place-items-center gap-4 lg:grid-cols-4 lg:gap-x-4"
     >
       <div
-        class="rounded-lg bg-primary-300 p-10 lg:p-20"
+        class="rounded-lg bg-primary-300 p-10 lg:p-20 dark:bg-primary-700"
         v-for="(icon, index) of icons"
         :key="index"
       >
@@ -64,10 +65,14 @@ function generateIcons() {
 
       <!-- Go to release notes -->
       <NuxtLink
-        class="flex w-full items-center justify-center gap-x-2 rounded-full border border-primary-500 p-3 text-primary-500 transition hover:bg-primary-500 hover:text-primary-100 lg:w-[200px] lg:justify-around lg:gap-x-0"
+        class="group flex items-center justify-center gap-x-2 rounded-full border border-primary-500 p-3 text-primary-500 transition hover:bg-primary-400 hover:text-primary-100 lg:w-[200px]"
         to="/release-notes"
       >
-        Release Notes <BootstrapIcon class="text-xl" name="arrow-right" />
+        Release Notes
+        <BootstrapIcon
+          class="text-xl transition group-hover:translate-x-2"
+          name="arrow-right"
+        />
       </NuxtLink>
     </div>
   </header>
