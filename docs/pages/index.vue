@@ -30,7 +30,7 @@ function useToggleNotivueTheme(_theme: ColorTheme) {
     dark: {
       ...pastelTheme,
       "--nv-success-accent": shades[900],
-      "--nv-success-bg": shades[600],
+      "--nv-success-bg": shades[300],
       "--nv-success-fg": shades[900],
     },
     light: {
