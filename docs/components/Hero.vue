@@ -35,7 +35,7 @@ function generateIcons() {
   <header
     class="mx-auto grid h-screen w-[90%] place-content-center gap-y-20 lg:w-3/4"
   >
-    <h1 class="font-serif text-5xl lg:text-7xl">
+    <h1 class="font-serif text-5xl lg:text-7xl text-center">
       <span class="text-primary-500">Bootstrap Icons</span> meets
       <span class="text-primary-500">Nuxt</span>
     </h1>
