@@ -5,7 +5,7 @@ const shades = getColorShades("primary");
 </script>
 
 <template>
-  <div class="w-full bg-primary-100">
+  <div class="w-full" :style="{ background: shades[100] }">
     <div class="relative mx-auto h-screen w-[90%] py-20">
       <h1 class="text-5xl font-extrabold">
         {{ title }} · nuxt-bootstrap-icons
