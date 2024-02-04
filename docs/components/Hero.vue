@@ -57,7 +57,7 @@ function generateIcons() {
         class="flex w-full items-center justify-center gap-x-2 rounded-lg bg-primary-300 py-3 text-sm dark:bg-primary-700 lg:w-3/4 lg:gap-x-4"
         @click="copyToClipboard(($event.target as HTMLElement).innerText)"
       >
-        <BootstrapIcon class="text-xl" name="code-slash" />
+        <BootstrapIcon class="text-xl" name="copy" />
         <code>pnpm add -D nuxt-bootstrap-icons</code>
       </button>
 

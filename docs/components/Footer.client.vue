@@ -10,7 +10,7 @@ const toggleTheme = () => {
 
 <template>
   <footer
-    class="mx-auto flex flex-col items-center justify-center gap-y-4 py-10 md:flex-row lg:w-3/4"
+    class="mx-auto flex flex-col items-center justify-center gap-y-4 py-10 md:flex-row lg:w-1/2"
   >
     <h1 class="basis-1/2 text-lg tracking-wide">
       Made with 🧋 · Hosted on Vercel
