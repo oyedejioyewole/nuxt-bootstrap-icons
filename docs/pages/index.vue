@@ -3,14 +3,10 @@ import { pastelTheme, type NotivueTheme } from "notivue";
 
 type ColorTheme = "dark" | "light";
 
-defineOgImageComponent(
-  "Page",
-  {
-    title: "Documentation",
-    description: "A simple wrapper for bootstrap-icons in Nuxt",
-  },
-  { fonts: ["Lora:700", "Open Sans:400"] },
-);
+defineOgImageComponent("Page", {
+  description: "A simple wrapper for bootstrap-icons in Nuxt",
+  title: "Documentation",
+});
 
 const colorTheme = useColorMode();
 const shades = getColorShades("primary");
