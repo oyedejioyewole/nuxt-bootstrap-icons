@@ -35,9 +35,10 @@ function generateIcons() {
   <header
     class="mx-auto grid h-screen w-[90%] place-content-center gap-y-20 lg:w-3/4"
   >
-    <h1 class="font-serif text-5xl lg:text-7xl text-center">
-      <span class="text-primary-500">Bootstrap Icons</span> meets
-      <span class="text-primary-500">Nuxt</span>
+    <h1
+      class="text-center font-serif text-5xl text-primary-900 dark:text-primary-100 lg:text-7xl"
+    >
+      Bootstrap Icons meets Nuxt
     </h1>
 
     <!-- Icon grid -->
@@ -45,7 +46,7 @@ function generateIcons() {
       class="will-change-content grid grid-cols-2 place-items-center gap-4 lg:grid-cols-4 lg:gap-x-4"
     >
       <div
-        class="rounded-lg bg-primary-300 p-10 lg:p-20 dark:bg-primary-700"
+        class="rounded-lg border border-primary-900 bg-primary-300/50 p-10 text-primary-900 backdrop-blur-2xl dark:border-primary-100 dark:bg-primary-700/50 dark:text-primary-100 lg:p-20"
         v-for="(icon, index) of icons"
         :key="index"
       >
@@ -56,7 +57,7 @@ function generateIcons() {
     <div class="flex flex-col justify-between gap-y-4 lg:flex-row">
       <!-- Copy code -->
       <button
-        class="flex w-full items-center justify-center gap-x-2 rounded-lg bg-primary-300 py-3 text-sm text-primary-900 lg:w-3/4 lg:gap-x-4"
+        class="flex w-full items-center justify-center gap-x-2 rounded-lg bg-primary-300 py-3 text-sm text-primary-900 dark:bg-primary-700 dark:text-primary-100 lg:w-3/4 lg:gap-x-4"
         @click="copyToClipboard(($event.target as HTMLElement).innerText)"
       >
         <BootstrapIcon class="text-xl" name="code-slash" />
@@ -65,7 +66,7 @@ function generateIcons() {
 
       <!-- Go to release notes -->
       <NuxtLink
-        class="group flex items-center justify-center gap-x-2 rounded-full border border-primary-500 p-3 text-primary-500 transition hover:bg-primary-400 hover:text-primary-100 lg:w-[200px]"
+        class="group flex items-center justify-center gap-x-2 rounded-full border border-primary-900 bg-primary-300/50 p-3 text-primary-900 backdrop-blur-xl transition dark:border-primary-100 dark:bg-primary-700/50 dark:text-primary-100 lg:w-[200px]"
         to="/release-notes"
       >
         Release Notes

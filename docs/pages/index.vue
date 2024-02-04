@@ -52,7 +52,7 @@ function useToggleNotivueTheme(_theme: ColorTheme) {
 
   <!-- Documentation -->
   <ContentDoc
-    class="mx-auto space-y-8 py-20 lg:w-1/2"
+    class="mx-auto w-[90%] space-y-8 py-20 lg:w-1/2"
     id="documentation"
     path="/"
   />
@@ -65,11 +65,11 @@ function useToggleNotivueTheme(_theme: ColorTheme) {
 <style lang="scss">
 #documentation {
   a {
-    @apply font-bold text-primary-500 hover:underline;
+    @apply font-bold underline underline-offset-4;
   }
 
   code {
-    @apply rounded-lg bg-primary-300 px-3 py-1 text-sm text-primary-950;
+    @apply rounded-lg bg-primary-300 px-3 py-1 text-sm text-primary-900;
   }
 
   h1,
@@ -77,7 +77,7 @@ function useToggleNotivueTheme(_theme: ColorTheme) {
   h3,
   h4 {
     a {
-      @apply font-serif text-primary-950 dark:text-primary-100;
+      @apply font-serif no-underline;
     }
   }
   h1 {
@@ -96,7 +96,7 @@ function useToggleNotivueTheme(_theme: ColorTheme) {
     @apply text-xl font-bold lg:text-2xl;
 
     code {
-      @apply rounded-lg bg-primary-400 p-3;
+      @apply rounded-lg p-3;
     }
   }
 
@@ -113,7 +113,7 @@ function useToggleNotivueTheme(_theme: ColorTheme) {
   }
 
   pre {
-    @apply overflow-x-scroll rounded-lg bg-primary-900 p-5 text-sm lg:p-7;
+    @apply overflow-x-scroll rounded-lg bg-primary-900 p-5 text-sm backdrop-blur-2xl transition dark:border dark:border-primary-100 dark:bg-primary-800/50 lg:p-7;
 
     code {
       @apply rounded-none bg-transparent;

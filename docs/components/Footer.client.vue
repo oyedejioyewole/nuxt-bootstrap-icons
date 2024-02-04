@@ -33,7 +33,7 @@ const toggleTheme = () => {
       <!-- Nuxt -->
       <NuxtLink target="_blank" to="https://nuxt.com">
         <svg
-          class="fill-primary-950 transition dark:fill-primary-100"
+          class="fill-primary-900 transition dark:fill-primary-100"
           height="25"
           width="25"
           viewBox="0 0 512 512"

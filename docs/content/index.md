@@ -29,7 +29,7 @@ Follow the following steps to start using this module:
 
 Congratulations 🎉, you can now use any icon from Bootstrap Icons in your Nuxt project!
 
-Browse the available of icons [here.](https://icons.getbootstrap.com/)
+Browse the available of icons [here](https://icons.getbootstrap.com/).
 
 Before hurrying on now, lets go through some possible configuration you might want to do!
 
@@ -97,9 +97,17 @@ export default defineNuxtConfig({
 
 #### `showList`
 
-1. **Default:** `true`
+1. **Default:** `false`
 2. **Description:** Enable to generate a virtual file with the list of registered components at
 
    `#build/nuxt-bootstrap-icons.json`
 
 3. **Type:** `Boolean`
+
+```ts
+export default defineNuxtConfig({
+  bootstrapIcons: {
+    showList: true,
+  },
+});
+```
