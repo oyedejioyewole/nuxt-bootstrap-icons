@@ -5,10 +5,10 @@ const shades = getColorShades("primary");
 <template>
   <NuxtLoadingIndicator :color="shades[500]" />
 
-  <div class="relative mx-auto overflow-hidden">
+  <div class="relative overflow-hidden">
     <CursorFx />
 
-    <main>
+    <main class="mx-auto w-[90%]">
       <slot />
     </main>
 

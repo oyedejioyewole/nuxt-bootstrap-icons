@@ -52,7 +52,7 @@ function useToggleNotivueTheme(_theme: ColorTheme) {
 
   <!-- Documentation -->
   <ContentDoc
-    class="mx-auto w-[90%] space-y-8 py-20 lg:w-1/2"
+    class="mx-auto space-y-8 py-20 lg:w-3/4"
     id="documentation"
     path="/"
   />
