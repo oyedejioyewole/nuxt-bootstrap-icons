@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import anime from "animejs/lib/anime.es";
 
-const { x, y } = useMouse();
+const { x, y } = useMouse({ touch: false });
 
 watch([x, y], (_new) => {
   const [x, y] = _new;
@@ -17,7 +17,7 @@ watch([x, y], (_new) => {
 
 <template>
   <div
-    class="absolute -z-10 aspect-square h-36 rounded-full bg-gradient-to-br from-primary-100 via-primary-500 to-primary-900 bg-blend-lighten blur-lg dark:bg-blend-darken"
+    class="absolute -z-10 hidden aspect-square h-36 rounded-full bg-gradient-to-br from-primary-100 via-primary-500 to-primary-900 bg-blend-lighten blur-lg dark:bg-blend-darken lg:block"
     id="cursor-fx"
   />
 </template>
