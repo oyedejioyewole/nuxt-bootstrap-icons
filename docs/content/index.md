@@ -1,5 +1,4 @@
 ---
-title: Documentation · nuxt-bootstrap-icons
 description: A simple wrapper for Bootstrap Icons in Nuxt
 ---
 

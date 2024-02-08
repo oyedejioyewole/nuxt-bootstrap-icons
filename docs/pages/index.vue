@@ -12,7 +12,12 @@ const colorTheme = useColorMode();
 const shades = getColorShades("primary");
 const theme = ref<NotivueTheme>();
 
-onMounted(() => useToggleNotivueTheme(colorTheme.value as ColorTheme));
+onMounted(async () => {
+  const locomotive = await import("locomotive-scroll");
+  new locomotive.default();
+
+  useToggleNotivueTheme(colorTheme.value as ColorTheme);
+});
 
 watch(colorTheme, (_new) => useToggleNotivueTheme(_new.value as ColorTheme));
 
@@ -50,7 +55,7 @@ function useToggleNotivueTheme(_theme: ColorTheme) {
   <ContentDoc
     class="mx-auto space-y-8 py-20 lg:w-3/4"
     id="documentation"
-    path="/"
+    tag="section"
   />
 
   <Notivue v-slot="item">
@@ -77,7 +82,7 @@ function useToggleNotivueTheme(_theme: ColorTheme) {
     }
   }
   h1 {
-    @apply font-serif text-4xl  lg:text-6xl;
+    @apply font-serif text-4xl lg:text-6xl;
   }
 
   h2 {

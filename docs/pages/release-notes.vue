@@ -3,6 +3,11 @@ defineOgImageComponent("Page", {
   description: "Don't miss out on improvements and new features",
   title: "Release Notes",
 });
+
+onMounted(async () => {
+  const locomotive = await import("locomotive-scroll");
+  new locomotive.default();
+});
 </script>
 
 <template>
@@ -20,12 +25,7 @@ defineOgImageComponent("Page", {
     </NuxtLink>
 
     <!-- Release Notes -->
-    <ContentDoc
-      class="space-y-8"
-      id="release-notes"
-      path="/release-notes"
-      tag="section"
-    />
+    <ContentDoc class="space-y-8" id="release-notes" tag="section" />
   </div>
 </template>
 

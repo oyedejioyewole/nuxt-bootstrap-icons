@@ -1,18 +1,11 @@
 <script setup lang="ts">
-import anime from "animejs/lib/anime.es";
+import { gsap } from "gsap";
 
 const { x, y } = useMouse({ touch: false });
 
-watch([x, y], (_new) => {
-  const [x, y] = _new;
-  anime({
-    autoplay: true,
-    duration: 300,
-    targets: "#cursor-fx",
-    translateX: x - 50,
-    translateY: y - 50,
-  });
-});
+watch([x, y], (_new) =>
+  gsap.to("#cursor-fx", { x: _new[0] - 70, y: _new[1] - 70 }),
+);
 </script>
 
 <template>
