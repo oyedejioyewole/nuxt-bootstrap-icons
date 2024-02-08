@@ -1,5 +1,36 @@
 # Release Notes
 
+## v1.1.7
+
+[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.6...v1.1.7)
+
+### 🩹 Fixes
+
+- **docs:** Updated state of playground ([af8d726](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/af8d726))
+- **docs:** Disable 'touch' events for CursorFx ([606fa49](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/606fa49))
+- **docs:** 🤓 Fixed empty background in og-image ([acbac27](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/acbac27))
+
+### 💅 Refactors
+
+- **docs:** ⚒️ Code maintenance ([3695282](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/3695282))
+- **docs:** 🍹 Optimized og-image ([6fd2313](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/6fd2313))
+- **docs:** ✂️ Removed unused properties ([eb8ce3f](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/eb8ce3f))
+
+### 🏡 Chore
+
+- **dependencies:** ✨ Bumped @nuxt/kit to 3.10.1 ([91be914](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/91be914))
+
+### 🎨 Styles
+
+- **docs:** Centered heading on Hero component ([1c2ad08](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/1c2ad08))
+- **docs:** Changed background of toast theme ([4148218](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/4148218))
+- **docs:** 🎨 Switched to neumorphic theme ([43f2096](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/43f2096))
+- **docs:** Reduced width of footer by 25% ([573524a](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/573524a))
+
+### ❤️ Contributors
+
+- OyewoleOyedeji
+
 ## v1.1.6
 
 [compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.5...v1.1.6)
