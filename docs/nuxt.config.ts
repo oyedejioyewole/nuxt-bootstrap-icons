@@ -1,6 +1,5 @@
 export default defineNuxtConfig({
   bootstrapIcons: {
-    expose: true,
     showList: true,
   },
   colorMode: { classSuffix: "" },
