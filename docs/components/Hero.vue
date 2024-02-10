@@ -1,4 +1,3 @@
-github
 <script lang="ts" setup>
 import iconList from "#build/nuxt-bootstrap-icons.json";
 
@@ -33,7 +32,7 @@ function generateIcons() {
 </script>
 
 <template>
-  <header class="grid h-screen place-content-center gap-y-20">
+  <header class="grid min-h-screen place-content-center gap-y-20">
     <h1 class="text-center font-serif text-5xl lg:text-7xl">
       Bootstrap Icons meets Nuxt
     </h1>
@@ -63,12 +62,12 @@ function generateIcons() {
 
       <!-- Go to release notes -->
       <NuxtLink
-        class="group flex items-center justify-center gap-x-2 rounded-full border border-primary-900 bg-primary-300/50 p-3 backdrop-blur-xl transition dark:border-primary-100 dark:bg-primary-700/50 lg:w-[200px]"
+        class="group flex items-center justify-center gap-x-2 rounded-full border border-primary-900 bg-primary-300/50 p-3 backdrop-blur-xl dark:border-primary-100 dark:bg-primary-700/50 lg:w-[200px]"
         to="/release-notes"
       >
         Release Notes
         <BootstrapIcon
-          class="text-xl transition group-hover:translate-x-2"
+          class="text-xl transition-transform group-hover:translate-x-2"
           name="arrow-right"
         />
       </NuxtLink>

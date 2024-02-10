@@ -7,11 +7,10 @@ export default defineNuxtConfig({
   content: {
     defaultLocale: "en-US",
     highlight: {
-      theme: "one-dark-pro",
+      theme: { dark: "github-dark", default: "github-light" },
       preload: ["bash", "ts"],
     },
   },
-  css: ["notivue/animations.css", "notivue/notifications.css"],
   devtools: { enabled: true },
   googleFonts: {
     families: {
@@ -32,9 +31,6 @@ export default defineNuxtConfig({
   ],
   notivue: {
     position: "bottom-center",
-  },
-  routeRules: {
-    "/**": { isr: true },
   },
   site: {
     url: "https://nuxt-bootstrap-icons.vercel.app",
