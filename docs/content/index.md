@@ -1,5 +1,5 @@
 ---
-description: A simple wrapper for Bootstrap Icons in Nuxt
+description: An integration for bootstrap-icons in Nuxt
 ---
 
 # Documentation
@@ -26,7 +26,7 @@ Follow the following steps to start using this module:
    });
    ```
 
-Congratulations 🎉, you can now use any icon from Bootstrap Icons in your Nuxt project!
+Congratulations 🎉, you can now use any icon from `bootstrap-icons` in your Nuxt project!
 
 Browse the available of icons [here](https://icons.getbootstrap.com/).
 

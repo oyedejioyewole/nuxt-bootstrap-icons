@@ -35,9 +35,11 @@ defineProps({
 </script>
 
 <style lang="scss">
-pre code {
-  .line {
-    @apply block;
+pre {
+  code {
+    .line {
+      @apply block;
+    }
   }
 }
 </style>

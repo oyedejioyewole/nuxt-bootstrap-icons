@@ -32,7 +32,7 @@ const toggleTheme = () => {
           <li>
             <NuxtLink
               target="_blank"
-              to="https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons"
+              to="https://github.com/oyedejioyewole/nuxt-bootstrap-icons"
             >
               <BootstrapIcon name="github" />
             </NuxtLink>

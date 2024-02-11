@@ -5,6 +5,11 @@ useHead({
   },
   titleTemplate: "%s · nuxt-bootstrap-icons",
 });
+
+onMounted(async () => {
+  const locomotive = await import("locomotive-scroll");
+  new locomotive.default();
+});
 </script>
 
 <template>

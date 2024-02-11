@@ -1,3 +1,7 @@
+---
+description: Don't miss out on improvements and new features
+---
+
 # Release Notes
 
 ## v1.1.7
@@ -140,7 +144,7 @@
 
 ### 🚀 Enhancements
 
-- ⚠️  Moved options key to root of nuxt.config ([27e1035](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/27e1035))
+- ⚠️ Moved options key to root of nuxt.config ([27e1035](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/27e1035))
 
 ### 💅 Refactors
 
@@ -152,7 +156,7 @@
 
 #### ⚠️ Breaking Changes
 
-- ⚠️  Moved options key to root of nuxt.config ([27e1035](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/27e1035))
+- ⚠️ Moved options key to root of nuxt.config ([27e1035](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/27e1035))
 
 ### ❤️ Contributors
 

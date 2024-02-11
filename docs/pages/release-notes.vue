@@ -1,12 +1,5 @@
 <script lang="ts" setup>
-defineOgImageComponent("Page", {
-  description: "Don't miss out on improvements and new features",
-});
-
-onMounted(async () => {
-  const locomotive = await import("locomotive-scroll");
-  new locomotive.default();
-});
+defineOgImageComponent("Page");
 </script>
 
 <template>

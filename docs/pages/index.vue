@@ -5,20 +5,13 @@ import "notivue/notifications.css";
 
 type ColorTheme = "dark" | "light";
 
-defineOgImageComponent("Page", {
-  description: "An integration for bootstrap-icons in Nuxt",
-});
+defineOgImageComponent("Page");
 
 const colorTheme = useColorMode();
 const shades = getColorShades("primary");
 const theme = ref<NotivueTheme>();
 
-onMounted(async () => {
-  const locomotive = await import("locomotive-scroll");
-  new locomotive.default();
-
-  useToggleNotivueTheme(colorTheme.value as ColorTheme);
-});
+onMounted(() => useToggleNotivueTheme(colorTheme.value as ColorTheme));
 
 watch(colorTheme, (_new) => useToggleNotivueTheme(_new.value as ColorTheme));
 
