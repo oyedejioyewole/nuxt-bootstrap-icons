@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { gsap } from "gsap";
 
 const { x, y } = useMouse({ touch: false });

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 defineEmits<{ (name: "toggle-cursor-fx"): void }>();
 
 const theme = useColorMode();
