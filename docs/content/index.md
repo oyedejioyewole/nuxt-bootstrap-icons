@@ -13,7 +13,7 @@ Follow the following steps to start using this module:
 1. Add the `nuxt-bootstrap-icons` module to your project as a `devDependency`
 
    ```bash
-   $ pnpm add -D nuxt-bootstrap-icons
+   $ npx nuxi@latest module add nuxt-bootstrap-icons
    ```
 
 2. Add the module to the `modules` section of the `nuxt.config.ts`
