@@ -15,13 +15,6 @@ Just a simple integration for [Bootstrap Icons](https://icons.getbootstrap.com) 
 1. Add `nuxt-bootstrap-icons` dependency to your project
 
    ```bash
-   # Using pnpm
-   npx nuxi@latest module add nuxt-bootstrap-icons
-
-   # Using yarn
-   npx nuxi@latest module add nuxt-bootstrap-icons
-
-   # Using npm
    npx nuxi@latest module add nuxt-bootstrap-icons
    ```
 

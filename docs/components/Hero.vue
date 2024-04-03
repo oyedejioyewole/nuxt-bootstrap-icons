@@ -57,7 +57,7 @@ function generateIcons() {
         @click="copyToClipboard(($event.target as HTMLElement).innerText)"
       >
         <BootstrapIcon class="text-xl" name="copy" />
-        <code>npx nuxi@latest module add nuxt-bootstrap-icons
+        <code>npx nuxi@latest module add nuxt-bootstrap-icons</code>
       </button>
 
       <!-- Go to release notes -->
