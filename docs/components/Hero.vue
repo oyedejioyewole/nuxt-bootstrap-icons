@@ -1,34 +1,7 @@
 <script lang="ts" setup>
-import iconList from "#build/nuxt-bootstrap-icons.json";
-
-const { data: icons, refresh } = useAsyncData(async () => generateIcons());
+const { data: icons, refresh } = useAsyncData(async () => getIcons());
 
 useIntervalFn(refresh, 5000);
-
-const { copy } = useClipboard({ legacy: true });
-
-async function copyToClipboard(text: string) {
-  await copy(text);
-  push.success("Copied!");
-}
-
-function generateIcons() {
-  const generatedIcons: string[] = [];
-
-  for (let index = 0; index < 4; index++) {
-    const icon = `${iconList[Math.floor(Math.random() * iconList.length)]}`;
-
-    // Prevent duplicate icons
-    if (generatedIcons.includes(icon)) {
-      index--;
-      continue;
-    }
-
-    generatedIcons.push(icon);
-  }
-
-  return generatedIcons as BootstrapIcons[];
-}
 </script>
 
 <template>
@@ -54,7 +27,7 @@ function generateIcons() {
       <!-- Copy code -->
       <button
         class="flex w-full items-center justify-center gap-x-2 rounded-lg bg-primary-300 py-3 text-sm dark:bg-primary-700 lg:w-3/4 lg:gap-x-4"
-        @click="copyToClipboard(($event.target as HTMLElement).innerText)"
+        @click="useClipboardContent(($event.target as HTMLElement).innerText)"
       >
         <BootstrapIcon class="text-xl" name="copy" />
         <code>pnpm add -D nuxt-bootstrap-icons</code>

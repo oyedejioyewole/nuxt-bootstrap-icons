@@ -22,9 +22,3 @@ useHead({
     </section>
   </NuxtLayout>
 </template>
-
-<style>
-body {
-  @apply bg-primary-100 text-primary-900 transition-colors selection:bg-black/20 dark:bg-primary-900 dark:text-primary-100 dark:selection:bg-white/20;
-}
-</style>

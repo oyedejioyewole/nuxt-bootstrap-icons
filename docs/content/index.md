@@ -30,6 +30,12 @@ Congratulations 🎉, you can now use any icon from `bootstrap-icons` in your Nu
 
 Browse the available of icons [here](https://icons.getbootstrap.com/).
 
+## Usage
+
+**Note:** Assuming you're using the default prefix of `BootstrapIcon`
+
+:Examples
+
 Before hurrying on now, lets go through some possible configuration you might want to do!
 
 ## Configuration

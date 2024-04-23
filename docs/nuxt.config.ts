@@ -6,8 +6,11 @@ export default defineNuxtConfig({
   content: {
     defaultLocale: "en-US",
     highlight: {
-      theme: { dark: "github-dark", default: "github-light" },
-      preload: ["bash", "ts"],
+      langs: ["bash", "ts"],
+      theme: {
+        dark: "github-dark",
+        default: "github-light",
+      },
     },
   },
   devtools: { enabled: true },
@@ -36,8 +39,5 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     exposeConfig: true,
-  },
-  typescript: {
-    shim: false,
   },
 });

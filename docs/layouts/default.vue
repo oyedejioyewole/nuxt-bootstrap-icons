@@ -10,9 +10,9 @@ const showCursorFx = computed(() =>
 </script>
 
 <template>
-  <NuxtLoadingIndicator :color="shades[500]" />
-
   <div class="relative overflow-hidden">
+    <NuxtLoadingIndicator :color="shades[500]" />
+
     <CursorFx v-if="showCursorFx" />
 
     <main class="mx-auto w-[90%]">
@@ -22,3 +22,9 @@ const showCursorFx = computed(() =>
     <Footer @toggle-cursor-fx="enableCursorFx = !enableCursorFx" />
   </div>
 </template>
+
+<style>
+body {
+  @apply bg-primary-100 text-primary-900 transition-colors selection:bg-black/20 dark:bg-primary-900 dark:text-primary-100 dark:selection:bg-white/20;
+}
+</style>
