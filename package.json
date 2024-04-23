@@ -1,6 +1,6 @@
 {
   "name": "nuxt-bootstrap-icons",
-  "version": "1.1.7",
+  "version": "2.0.0",
   "description": "Just a simple integration for Bootstrap Icons",
   "repository": {
     "type": "git",
@@ -27,10 +27,7 @@
     "playground:build": "pnpm --filter playground build",
     "playground:dev": "pnpm --filter playground dev",
     "playground:generate": "pnpm --filter playground generate",
-    "prepack": "nuxt-module-build build",
-    "release:major": "pnpm prepack && changelogen --release --major --output docs/content/release-notes.md",
-    "release:minor": "pnpm prepack && changelogen --release --minor --output docs/content/release-notes.md",
-    "release:patch": "pnpm prepack && changelogen --release --patch --output docs/content/release-notes.md"
+    "prepack": "nuxt-module-build build"
   },
   "dependencies": {
     "@nuxt/kit": "^3.11.2",
