@@ -30,7 +30,7 @@ useIntervalFn(refresh, 5000);
         @click="useClipboardContent(($event.target as HTMLElement).innerText)"
       >
         <BootstrapIcon class="text-xl" name="copy" />
-        <code>pnpm add -D nuxt-bootstrap-icons</code>
+        <code>npx nuxi@latest module add nuxt-bootstrap-icons</code>
       </button>
 
       <!-- Go to release notes -->
