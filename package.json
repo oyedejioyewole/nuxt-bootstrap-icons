@@ -21,10 +21,9 @@
     "dist"
   ],
   "scripts": {
-    "dev:prepare": " tsc --module nodenext setup.ts && node setup.js && nuxt-module-build build --stub && nuxt-module-build prepare && pnpm lint && nuxi prepare docs && nuxi prepare playground",
+    "dev:prepare": " nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare docs && nuxi prepare playground",
     "docs:build": "pnpm --filter docs build",
     "docs:dev": "pnpm --filter docs dev",
-    "lint": "eslint . --fix",
     "playground:build": "pnpm --filter playground build",
     "playground:dev": "pnpm --filter playground dev",
     "playground:generate": "pnpm --filter playground generate",
@@ -34,18 +33,19 @@
     "release:patch": "pnpm prepack && pnpm lint && changelogen --release --patch --output docs/content/release-notes.md && git push --follow-tags"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.10.1",
-    "bootstrap-icons": "^1.11.3"
+    "@nuxt/kit": "^3.11.2",
+    "bootstrap-icons": "^1.11.3",
+    "nuxt-svgo-loader": "^0.3.0"
   },
   "devDependencies": {
-    "@nuxt/devtools": "1.0.8",
-    "@nuxt/eslint-config": "^0.2.0",
+    "@nuxt/devtools": "1.2.0",
+    "@nuxt/eslint-config": "^0.3.9",
     "@nuxt/module-builder": "^0.5.5",
-    "@nuxt/schema": "^3.10.1",
-    "@types/node": "^20.11.17",
+    "@nuxt/schema": "^3.11.2",
+    "@types/node": "^20.12.7",
     "changelogen": "^0.5.5",
-    "eslint": "^8.56.0",
-    "nuxt": "^3.10.1",
-    "typescript": "^5.3.3"
+    "eslint": "^9.1.1",
+    "nuxt": "^3.11.2",
+    "typescript": "^5.4.5"
   }
 }
