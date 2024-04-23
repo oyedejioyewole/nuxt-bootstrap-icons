@@ -61,20 +61,24 @@ const toggleTheme = () => {
         <hr class="w-8 border border-primary-900 dark:border-primary-100" />
       </li>
 
-      <!-- Toggle cursor effects -->
-      <li>
-        <button type="button" @click="$emit('toggle-cursor-fx')">
-          <BootstrapIcon name="stars" />
-        </button>
-      </li>
+      <li class="contents">
+        <ul class="contents">
+          <!-- Toggle cursor effects -->
+          <li>
+            <button type="button" @click="$emit('toggle-cursor-fx')">
+              <BootstrapIcon name="stars" />
+            </button>
+          </li>
 
-      <!-- Theme switcher -->
-      <li>
-        <button type="button" @click="toggleTheme">
-          <BootstrapIcon
-            :name="$colorMode.value === 'light' ? 'moon-stars' : 'sun'"
-          />
-        </button>
+          <!-- Theme switcher -->
+          <li>
+            <button type="button" @click="toggleTheme">
+              <BootstrapIcon
+                :name="$colorMode.value === 'light' ? 'moon-stars' : 'sun'"
+              />
+            </button>
+          </li>
+        </ul>
       </li>
     </ul>
   </footer>

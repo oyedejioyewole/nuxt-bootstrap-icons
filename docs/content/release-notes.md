@@ -4,6 +4,31 @@ description: Don't miss out on improvements and new features
 
 # Release Notes
 
+## v2.0.0
+
+[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.7...v2.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  🖊 Rewrote the way icons are registered ([#9](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/pull/9))
+
+### 💅 Refactors
+
+- **site:** 🎧 Extracted explicit styles ([ec82852](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/ec82852))
+- **docs:** ✂️ Removed unused property ([006e614](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/006e614))
+- **docs:** 🧹 Code maintenance ([5221e3e](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/5221e3e))
+- **docs:** 🔄 Order script properties ([460c1ea](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/460c1ea))
+- 🖊 Updated npm scripts ([#10](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/pull/10))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  🖊 Rewrote the way icons are registered ([#9](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/pull/9))
+
+### ❤️ Contributors
+
+- Oyedeji Oyewole ([@oyedejioyewole](http://github.com/oyedejioyewole))
+- OyewoleOyedeji ([@oyedejioyewole](http://github.com/oyedejioyewole))
+
 ## v1.1.7
 
 [compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.6...v1.1.7)
