@@ -66,22 +66,6 @@ On the other hand, when using `component`, the module will register all the avai
 
 <br>
 
-#### `expose`
-
-1. **Default**: `false`
-2. **Description**: Enable to register components globally.
-3. **Type**: `Boolean`
-
-```ts
-export default defineNuxtConfig({
-  bootstrapIcons: {
-    expose: true,
-  },
-});
-```
-
-<br>
-
 #### `prefix`
 
 1. **Default:** `bootstrap-icon` or `BootstrapIcon`
