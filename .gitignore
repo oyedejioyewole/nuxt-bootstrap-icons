@@ -54,11 +54,3 @@ coverage
 Network Trash Folder
 Temporary Items
 .apdisk
-
-
-# Compiled setup file
-setup.js
-
-# Workspace generated files
-src/runtime/components/library
-src/runtime/bootstrap-icons.list.json
