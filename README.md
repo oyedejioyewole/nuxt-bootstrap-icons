@@ -37,7 +37,7 @@ That's it! You can now use `nuxt-bootstrap-icons` in your Nuxt app ✨
 
 You can contribute to this module with StackBlitz:
 
-[![Edit OyewoleOyedeji/nuxt-bootstrap-icons/main][playground-src]][playground-href]
+[![Edit oyedejioyewole/nuxt-bootstrap-icons/main][playground-src]][playground-href]
 
 or locally for either
 
@@ -70,6 +70,6 @@ or
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
 [playground-src]: https://developer.stackblitz.com/img/open_in_stackblitz.svg
-[playground-href]: https://stackblitz.com/~/github.com/OyewoleOyedeji/nuxt-bootstrap-icons
+[playground-href]: https://stackblitz.com/~/github.com/oyedejioyewole/nuxt-bootstrap-icons
 [vercel-src]: https://vercel.com/button
-[vercel-href]: https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FOyewoleOyedeji%2Fnuxt-bootstrap-icons
+[vercel-href]: https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Foyedejioyewole%2Fnuxt-bootstrap-icons
