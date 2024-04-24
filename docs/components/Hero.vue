@@ -11,9 +11,9 @@ useIntervalFn(refresh, 5000);
     </h1>
 
     <!-- Icon grid -->
-    <div class="grid grid-cols-2 lg:grid-cols-4">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
       <div
-        class="place-self-center rounded-lg border border-primary-900 bg-primary-200 bg-opacity-50 p-10 text-center backdrop-blur-sm transition-[border] hover:bg-opacity-100 dark:border-primary-100 dark:border-opacity-50 dark:bg-primary-800 dark:hover:border-opacity-100 lg:p-20"
+        class="rounded-lg border border-primary-900 bg-primary-200 bg-opacity-50 p-10 text-center backdrop-blur-sm transition-[border] hover:bg-opacity-100 dark:border-primary-100 dark:border-opacity-50 dark:bg-primary-800 dark:hover:border-opacity-100 lg:place-self-center lg:p-20"
         v-for="(icon, index) of icons"
         :key="index"
       >
@@ -24,7 +24,7 @@ useIntervalFn(refresh, 5000);
     <div class="flex flex-col justify-between gap-y-4 lg:flex-row">
       <!-- Copy code -->
       <button
-        class="flex w-full items-center justify-center gap-x-2 rounded-lg border border-primary-900 bg-primary-200 bg-opacity-50 py-3 text-sm backdrop-blur-sm transition-[border] hover:bg-opacity-100 dark:border-primary-100 dark:border-opacity-50 dark:bg-primary-800 dark:hover:border-opacity-100 lg:w-3/4 lg:gap-x-4"
+        class="hidden w-full items-center justify-center gap-x-4 rounded-lg border border-primary-900 bg-primary-200 bg-opacity-50 py-3 text-sm backdrop-blur-sm transition-[border] hover:bg-opacity-100 dark:border-primary-100 dark:border-opacity-50 dark:bg-primary-800 dark:hover:border-opacity-100 md:flex lg:w-3/4 lg:gap-x-4"
         @click="useClipboardContent(($event.target as HTMLElement).innerText)"
       >
         <BootstrapIcon class="text-xl" name="copy" />

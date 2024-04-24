@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 const { x, y } = useMouse({ touch: false });
 
 watch([x, y], (_new) =>
-  gsap.to("#cursor-fx", { display: "block", x: _new[0] - 15, y: _new[1] - 15 }),
+  gsap.to("#cursor-fx", { display: "block", x: _new[0] - 17, y: _new[1] - 16 }),
 );
 </script>
 

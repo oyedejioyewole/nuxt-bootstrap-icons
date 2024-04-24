@@ -6,7 +6,7 @@
   <slot />
 
 
-  <button class="group flex gap-x-2" @click="useClipboardContent($props.code as string)">
+  <button class="group hidden lg:flex gap-x-2" @click="useClipboardContent($props.code as string)">
     <BootstrapIcon class="h-fit" name="copy" type="button"  />
     <span class="group-hover:block hidden">Copy</span>
   </button>
