@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   content: {
     defaultLocale: "en-US",
     highlight: {
-      langs: ["bash", "ts"],
+      langs: ["bash", "ts", "vue"],
       theme: {
         dark: "github-dark",
         default: "github-light",
