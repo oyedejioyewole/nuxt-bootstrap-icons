@@ -6,23 +6,23 @@ description: Don't miss out on improvements and new features
 
 ## v2.0.0
 
-[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.7...v2.0.0)
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.1.7...v2.0.0)
 
 ### 🚀 Enhancements
 
-- ⚠️  🖊 Rewrote the way icons are registered ([#9](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/pull/9))
+- ⚠️ 🖊 Rewrote the way icons are registered ([#9](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/pull/9))
 
 ### 💅 Refactors
 
-- **site:** 🎧 Extracted explicit styles ([ec82852](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/ec82852))
-- **docs:** ✂️ Removed unused property ([006e614](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/006e614))
-- **docs:** 🧹 Code maintenance ([5221e3e](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/5221e3e))
-- **docs:** 🔄 Order script properties ([460c1ea](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/460c1ea))
-- 🖊 Updated npm scripts ([#10](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/pull/10))
+- **site:** 🎧 Extracted explicit styles ([ec82852](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/ec82852))
+- **docs:** ✂️ Removed unused property ([006e614](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/006e614))
+- **docs:** 🧹 Code maintenance ([5221e3e](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/5221e3e))
+- **docs:** 🔄 Order script properties ([460c1ea](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/460c1ea))
+- 🖊 Updated npm scripts ([#10](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/pull/10))
 
 #### ⚠️ Breaking Changes
 
-- ⚠️  🖊 Rewrote the way icons are registered ([#9](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/pull/9))
+- ⚠️ 🖊 Rewrote the way icons are registered ([#9](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/pull/9))
 
 ### ❤️ Contributors
 
@@ -31,30 +31,30 @@ description: Don't miss out on improvements and new features
 
 ## v1.1.7
 
-[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.6...v1.1.7)
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.1.6...v1.1.7)
 
 ### 🩹 Fixes
 
-- **docs:** Updated state of playground ([af8d726](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/af8d726))
-- **docs:** Disable 'touch' events for CursorFx ([606fa49](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/606fa49))
-- **docs:** 🤓 Fixed empty background in og-image ([acbac27](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/acbac27))
+- **docs:** Updated state of playground ([af8d726](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/af8d726))
+- **docs:** Disable 'touch' events for CursorFx ([606fa49](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/606fa49))
+- **docs:** 🤓 Fixed empty background in og-image ([acbac27](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/acbac27))
 
 ### 💅 Refactors
 
-- **docs:** ⚒️ Code maintenance ([3695282](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/3695282))
-- **docs:** 🍹 Optimized og-image ([6fd2313](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/6fd2313))
-- **docs:** ✂️ Removed unused properties ([eb8ce3f](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/eb8ce3f))
+- **docs:** ⚒️ Code maintenance ([3695282](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/3695282))
+- **docs:** 🍹 Optimized og-image ([6fd2313](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/6fd2313))
+- **docs:** ✂️ Removed unused properties ([eb8ce3f](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/eb8ce3f))
 
 ### 🏡 Chore
 
-- **dependencies:** ✨ Bumped @nuxt/kit to 3.10.1 ([91be914](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/91be914))
+- **dependencies:** ✨ Bumped @nuxt/kit to 3.10.1 ([91be914](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/91be914))
 
 ### 🎨 Styles
 
-- **docs:** Centered heading on Hero component ([1c2ad08](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/1c2ad08))
-- **docs:** Changed background of toast theme ([4148218](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/4148218))
-- **docs:** 🎨 Switched to neumorphic theme ([43f2096](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/43f2096))
-- **docs:** Reduced width of footer by 25% ([573524a](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/573524a))
+- **docs:** Centered heading on Hero component ([1c2ad08](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/1c2ad08))
+- **docs:** Changed background of toast theme ([4148218](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/4148218))
+- **docs:** 🎨 Switched to neumorphic theme ([43f2096](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/43f2096))
+- **docs:** Reduced width of footer by 25% ([573524a](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/573524a))
 
 ### ❤️ Contributors
 
@@ -62,18 +62,18 @@ description: Don't miss out on improvements and new features
 
 ## v1.1.6
 
-[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.5...v1.1.6)
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.1.5...v1.1.6)
 
 ### 🚀 Enhancements
 
-- **docs:** 🎨 Added theme switcher to footer ([2087c6f](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/2087c6f))
-- 🍹 Enabled 'bundler' module resolution ([540048b](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/540048b))
+- **docs:** 🎨 Added theme switcher to footer ([2087c6f](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/2087c6f))
+- 🍹 Enabled 'bundler' module resolution ([540048b](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/540048b))
 
 ### 💅 Refactors
 
-- **README:** Updated playground link ([e332d46](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/e332d46))
-- **README:** Removed outdated information ([77f4df6](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/77f4df6))
-- **README:** Update playground links ([ec1d61a](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/ec1d61a))
+- **README:** Updated playground link ([e332d46](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/e332d46))
+- **README:** Removed outdated information ([77f4df6](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/77f4df6))
+- **README:** Update playground links ([ec1d61a](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/ec1d61a))
 
 ### ❤️ Contributors
 
@@ -81,25 +81,25 @@ description: Don't miss out on improvements and new features
 
 ## v1.1.5
 
-[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.4...v1.1.5)
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.1.4...v1.1.5)
 
 ### 🩹 Fixes
 
-- **docs:** Resolved ERR_PNPM_OUTDATED_LOCKFILE ([e1529b1](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/e1529b1))
-- **docs:** Quit using workspace version ([4650f7c](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/4650f7c))
-- Refactor faulty setup script ([b3c4504](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/b3c4504))
-- Resolved possible icon list resolve problem ([94ec221](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/94ec221))
-- Re-order commands in dev:prepare script ([2582a1d](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/2582a1d))
+- **docs:** Resolved ERR_PNPM_OUTDATED_LOCKFILE ([e1529b1](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/e1529b1))
+- **docs:** Quit using workspace version ([4650f7c](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/4650f7c))
+- Refactor faulty setup script ([b3c4504](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/b3c4504))
+- Resolved possible icon list resolve problem ([94ec221](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/94ec221))
+- Re-order commands in dev:prepare script ([2582a1d](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/2582a1d))
 
 ### 💅 Refactors
 
-- Removed unnecessary colons ([7b69eeb](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/7b69eeb))
-- Removed unnecessary code ([0864cdc](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/0864cdc))
+- Removed unnecessary colons ([7b69eeb](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/7b69eeb))
+- Removed unnecessary code ([0864cdc](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/0864cdc))
 
 ### 🏡 Chore
 
-- **docs:** 😐 Changed module version specifier ([e453d7e](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/e453d7e))
-- Bumped devDependency versions ([bc1de2c](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/bc1de2c))
+- **docs:** 😐 Changed module version specifier ([e453d7e](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/e453d7e))
+- Bumped devDependency versions ([bc1de2c](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/bc1de2c))
 
 ### ❤️ Contributors
 
@@ -107,16 +107,16 @@ description: Don't miss out on improvements and new features
 
 ## v1.1.4
 
-[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.3...v1.1.4)
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.1.3...v1.1.4)
 
 ### 🩹 Fixes
 
-- Resolved issues with virtual file creation ([7035ee0](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/7035ee0))
-- Resolved postinstall problems ([e8a09d6](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/e8a09d6))
+- Resolved issues with virtual file creation ([7035ee0](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/7035ee0))
+- Resolved postinstall problems ([e8a09d6](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/e8a09d6))
 
 ### 🏡 Chore
 
-- **docs:** Changed module specifier to 'latest' ([c273fbd](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/c273fbd))
+- **docs:** Changed module specifier to 'latest' ([c273fbd](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/c273fbd))
 
 ### ❤️ Contributors
 
@@ -124,11 +124,11 @@ description: Don't miss out on improvements and new features
 
 ## v1.1.3
 
-[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.2...v1.1.3)
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.1.2...v1.1.3)
 
 ### 🩹 Fixes
 
-- Resolved support issues with import assertion ([641735f](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/641735f))
+- Resolved support issues with import assertion ([641735f](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/641735f))
 
 ### ❤️ Contributors
 
@@ -136,11 +136,11 @@ description: Don't miss out on improvements and new features
 
 ## v1.1.2
 
-[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.1...v1.1.2)
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.1.1...v1.1.2)
 
 ### 🩹 Fixes
 
-- Imported bootstrap-icons list using ESM ([6821d47](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/6821d47))
+- Imported bootstrap-icons list using ESM ([6821d47](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/6821d47))
 
 ### ❤️ Contributors
 
@@ -148,16 +148,16 @@ description: Don't miss out on improvements and new features
 
 ## v1.1.1
 
-[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.1.0...v1.1.1)
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.1.0...v1.1.1)
 
 ### 🩹 Fixes
 
-- Moved postinstall to dev:prepare script ([b5c4b9b](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/b5c4b9b))
+- Moved postinstall to dev:prepare script ([b5c4b9b](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/b5c4b9b))
 
 ### 💅 Refactors
 
-- Updated README ([94bb812](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/94bb812))
-- Fixed grammar issues ([4307517](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/4307517))
+- Updated README ([94bb812](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/94bb812))
+- Fixed grammar issues ([4307517](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/4307517))
 
 ### ❤️ Contributors
 
@@ -165,23 +165,23 @@ description: Don't miss out on improvements and new features
 
 ## v1.1.0
 
-[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.0.3...v1.1.0)
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.0.3...v1.1.0)
 
 ### 🚀 Enhancements
 
-- ⚠️ Moved options key to root of nuxt.config ([27e1035](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/27e1035))
+- ⚠️ Moved options key to root of nuxt.config ([27e1035](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/27e1035))
 
 ### 💅 Refactors
 
-- Added links to documentation in jsdoc ([207ae4d](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/207ae4d))
+- Added links to documentation in jsdoc ([207ae4d](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/207ae4d))
 
 ### 🏡 Chore
 
-- **dependencies:** Bumped non-major dependencies ([e9fec81](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/e9fec81))
+- **dependencies:** Bumped non-major dependencies ([e9fec81](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/e9fec81))
 
 #### ⚠️ Breaking Changes
 
-- ⚠️ Moved options key to root of nuxt.config ([27e1035](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/27e1035))
+- ⚠️ Moved options key to root of nuxt.config ([27e1035](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/27e1035))
 
 ### ❤️ Contributors
 
@@ -189,12 +189,12 @@ description: Don't miss out on improvements and new features
 
 ## v1.0.3
 
-[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.0.2...v1.0.3)
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.0.2...v1.0.3)
 
 ### 🏡 Chore
 
-- **devDependencies:** Bumped [@types/node, changelogen, @nuxt/devtools, +1] ([ede7896](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/ede7896))
-- **dependencies:** Bumped bootstrap-icons to 1.11.1 ([383c90d](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/383c90d))
+- **devDependencies:** Bumped [@types/node, changelogen, @nuxt/devtools, +1] ([ede7896](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/ede7896))
+- **dependencies:** Bumped bootstrap-icons to 1.11.1 ([383c90d](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/383c90d))
 
 ### ❤️ Contributors
 
@@ -202,12 +202,12 @@ description: Don't miss out on improvements and new features
 
 ## v1.0.2
 
-[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.0.1...v1.0.2)
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.0.1...v1.0.2)
 
 ### 🏡 Chore
 
-- **package:** Edited scripts ([b84ad1c](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/b84ad1c))
-- **package:** Edited scripts" ([7b2d0c5](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/7b2d0c5))
+- **package:** Edited scripts ([b84ad1c](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/b84ad1c))
+- **package:** Edited scripts" ([7b2d0c5](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/7b2d0c5))
 
 ### ❤️ Contributors
 
@@ -215,17 +215,17 @@ description: Don't miss out on improvements and new features
 
 ## v1.0.1
 
-[compare changes](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/compare/v1.0.0...v1.0.1)
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.0.0...v1.0.1)
 
 ### 💅 Refactors
 
-- **runtime:** Fixed lint warnings ([596bf21](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/596bf21))
-- **package:** Removed whitespace ([98875eb](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/98875eb))
+- **runtime:** Fixed lint warnings ([596bf21](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/596bf21))
+- **package:** Removed whitespace ([98875eb](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/98875eb))
 
 ### 📖 Documentation
 
-- **refactor:** Updated playground link ([6918fe4](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/6918fe4))
-- **refactor:** Changed about ([4d9790c](https://github.com/OyewoleOyedeji/nuxt-bootstrap-icons/commit/4d9790c))
+- **refactor:** Updated playground link ([6918fe4](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/6918fe4))
+- **refactor:** Changed about ([4d9790c](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/4d9790c))
 
 ### ❤️ Contributors
 
