@@ -1,8 +1,16 @@
 <template>
   <pre
-    class="overflow-x-auto rounded-lg border border-primary-900 bg-primary-200/50 p-5 text-sm backdrop-blur-2xl dark:border-primary-100 dark:bg-primary-800/50 lg:p-7"
+    class="flex justify-between overflow-x-auto rounded-lg border border-primary-900 bg-primary-200 bg-opacity-50 p-5 text-sm backdrop-blur-sm transition-[border] hover:bg-opacity-100 dark:border-primary-100 dark:border-opacity-50 dark:bg-primary-800 dark:hover:border-opacity-100 lg:p-7"
     :class="$props.class"
-  ><slot /></pre>
+  >
+  <slot />
+
+
+  <button class="group hidden lg:flex gap-x-2" @click="useClipboardContent($props.code as string)">
+    <BootstrapIcon class="h-fit" name="copy" type="button"  />
+    <span class="group-hover:block hidden">Copy</span>
+  </button>
+  </pre>
 </template>
 
 <script setup lang="ts">

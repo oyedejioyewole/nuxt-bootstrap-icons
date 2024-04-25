@@ -1,46 +1,30 @@
----
-description: An integration for bootstrap-icons in Nuxt
----
-
 # Documentation
 
-If you are reading this, I want to take a moment to thank you for trying out this module 😅
+:-P An easier way of using [bootstrap-icons](https://icons.getbootstrap.com) for your Nuxt project!
 
 ## Setup
 
-Follow the following steps to start using this module:
+Run the following command to install and add the module to your project:
 
-1. Add the `nuxt-bootstrap-icons` module to your project as a `devDependency`
+```bash
+$ pnpm dlx nuxi@latest module add nuxt-bootstrap-icons
+```
 
-   ```bash
-   $ npx nuxi@latest module add nuxt-bootstrap-icons
-   ```
+**Aside**: I know I'm being preferential in my choice of package managers
 
-2. Add the module to the `modules` section of the `nuxt.config.ts`
-
-   ```ts
-   export default defineNuxtConfig({
-     bootstrapIcons: {}, // Override module options,
-     devtools: { enabled: true },
-     modules: ["nuxt-bootstrap-icons"],
-   });
-   ```
-
-Congratulations 🎉, you can now use any icon from `bootstrap-icons` in your Nuxt project!
-
-Browse the available of icons [here](https://icons.getbootstrap.com/).
+Congratulations 🎉, you can now browse [bootstrap-icons](https://icons.getbootstrap.com) for icons to use in your project!
 
 ## Usage
 
-**Note:** Assuming you're using the default prefix of `BootstrapIcon`
+**Tip**: Click on an icon to copy the component name
 
 :Examples
 
-Before hurrying on now, lets go through some possible configuration you might want to do!
+**Tip**: You can use any case style for the components
 
 ## Configuration
 
-You can configure the module using the `bootstrapIcons` key in the `nuxt.config.ts`
+You can configure the module using the `bootstrapIcons` key in your `nuxt.config`
 
 ### Options
 
@@ -49,7 +33,7 @@ You can configure the module using the `bootstrapIcons` key in the `nuxt.config.
 #### `display`
 
 1. **Default**: `inline`
-2. **Description**: Choose how you want to register and display components.
+2. **Description**: How should the module register the icons?
 3. **Type**: `String`
 
 ```ts
@@ -60,34 +44,42 @@ export default defineNuxtConfig({
 });
 ```
 
-**Note**: When using `inline`, the module will register a component (depending on your prefix) which you can then use to display icons through the `name` property.
+**Note**: When using `inline`, the module will register a component (depending on your prefix)
 
-On the other hand, when using `component`, the module will register all the available icons as components (prefixed from value in `nuxt.config`) which you can then use normally in your project.
+```vue
+<BootstrapIcon name="0-circle" />
+```
+
+**Note**: When using `component`, the module will register all icons from [bootstrap-icons](https://icons.getboostrap.com) as components (including the prefix)
+
+```vue
+<BootstrapIcon0Circle />
+```
 
 <br>
 
 #### `prefix`
 
-1. **Default:** `bootstrap-icon` or `BootstrapIcon`
-2. **Description:** The prefix of the component names.
+1. **Default:** `bootstrap-icon`
+2. **Description:** What should be prefixed to the icons?
 3. **Type:** `String`
 
 ```ts
 export default defineNuxtConfig({
   bootstrapIcons: {
-    prefix: "your-prefix", // or YourPrefix
+    prefix: "your-prefix",
   },
 });
 ```
 
-**Note**: if you have a multi word prefix, you should include a &mdash; between the words.
+**Tip**: if you have a multi word prefix, you should include a &mdash; between the words.
 
 <br>
 
 #### `showList`
 
 1. **Default:** `false`
-2. **Description:** Enable to generate a virtual file with the list of registered components at
+2. **Description:** Option: enable to add a virtual JSON file containing all the icons registered at path
 
    `#build/nuxt-bootstrap-icons.json`
 
