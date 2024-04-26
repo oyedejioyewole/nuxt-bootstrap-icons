@@ -12,7 +12,7 @@ import { dirname, join, parse } from "path";
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   /**
-   * Choose how you want to register and display components
+   * How should the module register the icons?
    *
    * @default 'inline'
    * @link https://nuxt-bootstrap-icons.vercel.app#display
@@ -20,16 +20,18 @@ export interface ModuleOptions {
   display: "inline" | "component";
 
   /**
-   * The prefix of the component names
+   * What should be prefixed to the icons?
    *
-   * @default "bootstrap-icon" or "BootstrapIcon"
+   * @default "bootstrap-icon"
    * @link https://nuxt-bootstrap-icons.vercel.app#prefix
    */
   prefix: string;
 
   /**
-   * Enable to generate a virtual file with the list
-   * of registered components at `#build/nuxt-bootstrap-icons.json`
+   * **OPTION**
+   *
+   * Enable to add a virtual JSON file containing all the icons registered at path
+   * `#build/nuxt-bootstrap-icons.json`
    *
    * @default false
    * @link https://nuxt-bootstrap-icons.vercel.app#showlist

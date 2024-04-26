@@ -1,11 +1,17 @@
 <script lang="ts" setup>
 import "bootstrap-icons/font/bootstrap-icons.min.css";
 
-defineProps<{
-  name: BootstrapIcons;
-}>();
+withDefaults(
+  defineProps<{
+    name: BootstrapIcons;
+    as?: string;
+  }>(),
+  {
+    as: "i",
+  },
+);
 </script>
 
 <template>
-  <i :class="'bi ' + 'bi-' + $props.name" />
+  <component :class="'bi ' + 'bi-' + $props.name" :is="$props.as" />
 </template>
