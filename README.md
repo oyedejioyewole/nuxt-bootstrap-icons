@@ -4,26 +4,18 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-Just a simple integration for [Bootstrap Icons](https://icons.getbootstrap.com) in [Nuxt](https://nuxt.com)
+An easier way of using [bootstrap-icons](https://icons.getbootstrap.com) in [Nuxt](https://nuxt.com) project!
 
 - [✨ &nbsp;Release Notes](https://nuxt-bootstrap-icons.vercel.app/release-notes)
 - [🏀 Online playground][playground-href]
 - [📖 &nbsp;Documentation](https://nuxt-bootstrap-icons.vercel.app)
 
-## Quick Setup
+## Setup
 
-1. Add `nuxt-bootstrap-icons` dependency to your project
+Run the following command to install and add the module to your project:
 
-   ```bash
-   npx nuxi@latest module add nuxt-bootstrap-icons
-   ```
-
-2. Add `nuxt-bootstrap-icons` to the `modules` section of `nuxt.config.ts`
-
-```js
-export default defineNuxtConfig({
-  modules: ["nuxt-bootstrap-icons"],
-});
+```bash
+npx nuxi@latest module add nuxt-bootstrap-icons
 ```
 
 That's it! You can now use `nuxt-bootstrap-icons` in your Nuxt app ✨
@@ -31,7 +23,7 @@ That's it! You can now use `nuxt-bootstrap-icons` in your Nuxt app ✨
 ## Resources
 
 1. **Documentation**: <https://nuxt-bootstrap-icons.vercel.app>
-2. **Bootstrap Icons**: <https://icons.getbootstrap.com>
+2. **Icons**: <https://icons.getbootstrap.com>
 
 ## Contributing
 

@@ -1,8 +1,7 @@
 export default defineNuxtConfig({
   bootstrapIcons: {
-    prefix: "nuxt-icon",
     display: "component",
-    expose: true,
+    prefix: "nuxt-icon",
     showList: true,
   },
   modules: ["../src/module"],

@@ -10,14 +10,14 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.12.1",
-    "@nuxtjs/color-mode": "^3.4.0",
+    "@nuxtjs/color-mode": "^3.4.1",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.12.0",
-    "@vueuse/core": "^10.9.0",
-    "@vueuse/nuxt": "^10.9.0",
+    "@vueuse/core": "^10.10.0",
+    "@vueuse/nuxt": "^10.10.0",
     "nuxt-bootstrap-icons": "workspace:^",
-    "nuxt-og-image": "3.0.0-rc.52",
-    "sass": "^1.75.0"
+    "nuxt-og-image": "3.0.0-rc.53",
+    "sass": "^1.77.2"
   },
   "dependencies": {
     "@bobthered/tailwindcss-palette-generator": "^3.2.3",
@@ -26,7 +26,7 @@
     "locomotive-scroll": "5.0.0-beta.11",
     "notivue": "^2.4.4",
     "nuxt": "^3.11.2",
-    "vue": "^3.4.24",
+    "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   },
   "optionalDependencies": {

@@ -1,7 +1,7 @@
 {
   "name": "nuxt-bootstrap-icons",
   "version": "2.0.0",
-  "description": "An easier way of using bootstrap-icons for your Nuxt project!",
+  "description": "An easier way of using bootstrap-icons in your Nuxt project!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oyedejioyewole/nuxt-bootstrap-icons.git"
@@ -27,24 +27,21 @@
     "playground:build": "pnpm --filter playground build",
     "playground:dev": "pnpm --filter playground dev",
     "playground:generate": "pnpm --filter playground generate",
-    "prepack": "nuxt-module-build build",
-    "release:major": "changelogen --major --publish",
-    "release:minor": "changelogen --minor --publish",
-    "release:patch": "changelogen --patch --publish"
+    "prepack": "nuxt-module-build build"
   },
   "dependencies": {
     "@nuxt/kit": "^3.11.2",
     "bootstrap-icons": "^1.11.3",
-    "nuxt-svgo-loader": "^0.3.0"
+    "nuxt-svgo-loader": "^0.4.0"
   },
   "devDependencies": {
-    "@nuxt/devtools": "1.2.0",
-    "@nuxt/eslint-config": "^0.3.9",
-    "@nuxt/module-builder": "^0.5.5",
+    "@nuxt/devtools": "1.3.2",
+    "@nuxt/eslint-config": "^0.3.13",
+    "@nuxt/module-builder": "^0.7.0",
     "@nuxt/schema": "^3.11.2",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.12.12",
     "changelogen": "^0.5.5",
-    "eslint": "^9.1.1",
+    "eslint": "^9.3.0",
     "nuxt": "^3.11.2",
     "typescript": "^5.4.5"
   }
