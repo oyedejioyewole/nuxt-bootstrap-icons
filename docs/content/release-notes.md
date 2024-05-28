@@ -4,6 +4,33 @@ description: Don't miss out on improvements and new features
 
 # Release Notes
 
+## v2.0.1
+
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v2.0.0...v2.0.1)
+
+### 🚀 Enhancements
+
+- **docs:** ✨ Added usage section ([#12](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/pull/12))
+
+### 💅 Refactors
+
+- ✂️Removed unused npm scripts ([#13](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/pull/13))
+
+### 📖 Documentation
+
+- Use new `nuxi module add` command in installation ([#8](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/pull/8))
+- ✂️ Removed outdated information ([#14](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/pull/14))
+
+### 🏡 Chore
+
+- Bumped nuxt-svgo-loader to 0.4.0 🔄 ([dc2e3cd](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/dc2e3cd))
+
+### ❤️ Contributors
+
+- Oyedejioyewole ([@oyedejioyewole](http://github.com/oyedejioyewole))
+- Oyedeji Oyewole ([@oyedejioyewole](http://github.com/oyedejioyewole))
+- Daniel Roe ([@danielroe](http://github.com/danielroe))
+
 ## v2.0.0
 
 [compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v1.1.7...v2.0.0)
