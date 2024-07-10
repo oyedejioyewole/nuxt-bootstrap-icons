@@ -13,5 +13,5 @@ withDefaults(
 </script>
 
 <template>
-  <component :class="'bi ' + 'bi-' + $props.name" :is="$props.as" />
+  <component :class="`bi bi-${$props.name}`" :is="$props.as" />
 </template>
