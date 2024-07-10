@@ -4,6 +4,18 @@ description: Don't miss out on improvements and new features
 
 # Release Notes
 
+## v2.0.2
+
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v2.0.1...v2.0.2)
+
+### 🩹 Fixes
+
+- ⚒️ Resolved icon scaling problems ([#18](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/pull/18))
+
+### ❤️ Contributors
+
+- Oyedejioyewole ([@oyedejioyewole](http://github.com/oyedejioyewole))
+
 ## v2.0.1
 
 [compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v2.0.0...v2.0.1)
