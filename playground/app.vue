@@ -5,6 +5,7 @@ import iconList from "#build/nuxt-bootstrap-icons.json";
 <template>
   <main>
     <h1>Playground</h1>
+    <NuxtIconHouseDown />
   </main>
 </template>
 
