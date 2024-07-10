@@ -10,17 +10,11 @@ Run the following command to install and add the module to your project:
 $ pnpm dlx nuxi@latest module add nuxt-bootstrap-icons
 ```
 
-**Aside**: I know I'm being preferential in my choice of package managers
+**Aside #1**: I know I'm being preferential in my choice of package managers.
+
+**Aside #2**: This module supports any case for the component name.
 
 Congratulations 🎉, you can now browse [bootstrap-icons](https://icons.getbootstrap.com) for icons to use in your project!
-
-## Usage
-
-**Tip**: Click on an icon to copy the component name
-
-:Examples
-
-**Tip**: You can use any case style for the components
 
 ## Configuration
 
