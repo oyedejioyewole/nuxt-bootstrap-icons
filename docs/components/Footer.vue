@@ -4,9 +4,7 @@ defineEmits<{ (name: "toggle-cursor-fx"): void }>();
 const theme = useColorMode();
 
 const toggleTheme = () => {
-  theme.value === "dark"
-    ? (theme.preference = "light")
-    : (theme.preference = "dark");
+  theme.preference = theme.value === "dark" ? "light" : "dark";
 };
 </script>
 
@@ -23,7 +21,11 @@ const toggleTheme = () => {
         <ul class="contents">
           <!-- Bootstrap Icons -->
           <li>
-            <NuxtLink target="_blank" to="https://icons.getbootstrap.com">
+            <NuxtLink
+              class="blob-hide"
+              target="_blank"
+              to="https://icons.getbootstrap.com"
+            >
               <BootstrapIcon name="bootstrap-fill" />
             </NuxtLink>
           </li>
@@ -31,6 +33,7 @@ const toggleTheme = () => {
           <!-- Repository -->
           <li>
             <NuxtLink
+              class="blob-hide"
               target="_blank"
               to="https://github.com/oyedejioyewole/nuxt-bootstrap-icons"
             >
@@ -40,7 +43,7 @@ const toggleTheme = () => {
 
           <!-- Nuxt -->
           <li>
-            <NuxtLink target="_blank" to="https://nuxt.com">
+            <NuxtLink class="blob-hide" target="_blank" to="https://nuxt.com">
               <svg
                 class="fill-primary-900 dark:fill-primary-100"
                 height="25"
@@ -62,23 +65,13 @@ const toggleTheme = () => {
       </li>
 
       <li class="contents">
-        <ul class="contents">
-          <!-- Toggle cursor effects -->
-          <li>
-            <button type="button" @click="$emit('toggle-cursor-fx')">
-              <BootstrapIcon name="stars" />
-            </button>
-          </li>
-
-          <!-- Theme switcher -->
-          <li>
-            <button type="button" @click="toggleTheme">
-              <BootstrapIcon
-                :name="$colorMode.value === 'light' ? 'moon-stars' : 'sun'"
-              />
-            </button>
-          </li>
-        </ul>
+        <button class="blob-hide" type="button" @click="toggleTheme">
+          <ClientOnly>
+            <BootstrapIcon
+              :name="$colorMode.preference === 'light' ? 'moon-stars' : 'sun'"
+            />
+          </ClientOnly>
+        </button>
       </li>
     </ul>
   </footer>

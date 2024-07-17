@@ -1,11 +1,10 @@
 export default defineNuxtConfig({
   bootstrapIcons: { showList: true },
-  colorMode: { classSuffix: "" },
   content: {
     defaultLocale: "en-US",
     highlight: {
       langs: ["bash", "ts", "vue"],
-      theme: { dark: "github-dark", default: "github-light" },
+      theme: { "dark-mode": "github-dark", default: "github-light" },
     },
   },
   devtools: { enabled: true },
@@ -18,6 +17,7 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxt/content",
+    "@nuxt/image",
     "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
     "@nuxtjs/tailwindcss",
@@ -25,9 +25,8 @@ export default defineNuxtConfig({
     "notivue/nuxt",
     "nuxt-bootstrap-icons",
     "nuxt-og-image",
-    "@nuxt/image",
   ],
-  notivue: { position: "bottom-center" },
+  notivue: { position: "bottom-right" },
   site: { url: "https://nuxt-bootstrap-icons.vercel.app" },
   tailwindcss: { exposeConfig: true },
   compatibilityDate: "2024-07-08",

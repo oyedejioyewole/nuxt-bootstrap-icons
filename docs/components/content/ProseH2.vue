@@ -1,10 +1,10 @@
 <template>
-  <h2 class="font-serif text-3xl lg:text-4xl" :id="id">
+  <UIHeadings level="h2" :id="id">
     <a v-if="id && generate" :href="`#${id}`">
       <slot />
     </a>
     <slot v-else />
-  </h2>
+  </UIHeadings>
 </template>
 
 <script setup lang="ts">

@@ -14,7 +14,7 @@ description: Don't miss out on improvements and new features
 
 ### ❤️ Contributors
 
-- Oyedejioyewole ([@oyedejioyewole](http://github.com/oyedejioyewole))
+- Oyedeji Oyewole ([@oyedejioyewole](http://github.com/oyedejioyewole))
 
 ## v2.0.1
 
@@ -39,7 +39,6 @@ description: Don't miss out on improvements and new features
 
 ### ❤️ Contributors
 
-- Oyedejioyewole ([@oyedejioyewole](http://github.com/oyedejioyewole))
 - Oyedeji Oyewole ([@oyedejioyewole](http://github.com/oyedejioyewole))
 - Daniel Roe ([@danielroe](http://github.com/danielroe))
 

@@ -3,7 +3,6 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [],
-  darkMode: "class",
   theme: {
     extend: {
       colors: tailwindcssPaletteGenerator({
@@ -14,6 +13,9 @@ export default {
         mono: ["Courier Prime", "monospace"],
         sans: ["Open Sans", "sans-serif"],
         serif: ["Lora", "serif"],
+      },
+      transitionProperty: {
+        border: "border",
       },
     },
   },

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { pastelTheme, type NotivueTheme } from "notivue";
+
 import "notivue/animations.css";
 import "notivue/notifications.css";
 
