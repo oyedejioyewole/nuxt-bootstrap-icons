@@ -15,3 +15,15 @@ export const buttonStyles = tv({
     variant: "default",
   },
 });
+
+export const headingStyles = tv({
+  base: "font-serif",
+  variants: {
+    level: {
+      h1: "text-4xl lg:text-6xl",
+      h2: "text-3xl lg:text-4xl",
+      h3: "text-2xl lg:text-3xl",
+      h4: "text-xl lg:text-2xl",
+    },
+  },
+});

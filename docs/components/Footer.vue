@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-defineEmits<{ (name: "toggle-cursor-fx"): void }>();
-
 const theme = useColorMode();
 
 const toggleTheme = () => {
@@ -68,8 +66,15 @@ const toggleTheme = () => {
         <button class="blob-hide" type="button" @click="toggleTheme">
           <ClientOnly>
             <BootstrapIcon
-              :name="$colorMode.preference === 'light' ? 'moon-stars' : 'sun'"
+              :name="{
+                'moon-stars': $colorMode.value === 'light',
+                sun: $colorMode.value === 'dark',
+              }"
             />
+
+            <template #fallback>
+              <BootstrapIcon name="slash-circle" />
+            </template>
           </ClientOnly>
         </button>
       </li>

@@ -19,20 +19,22 @@ onMounted(() => {
 </script>
 
 <template>
-  <!-- Loading indicator -->
-  <NuxtLoadingIndicator :color="shades[500]" />
+  <div>
+    <!-- Loading indicator -->
+    <NuxtLoadingIndicator :color="shades[500]" />
 
-  <!-- Cursor blob -->
-  <CursorBlob />
+    <!-- Cursor blob -->
+    <CursorBlob />
 
-  <!-- Side-bar navigation -->
-  <Navigation />
+    <!-- Side-bar navigation -->
+    <Navigation />
 
-  <main class="mx-auto w-[90%]">
-    <slot />
-  </main>
+    <main class="mx-auto w-[90%]">
+      <slot />
+    </main>
 
-  <Footer />
+    <Footer />
+  </div>
 </template>
 
 <style>
