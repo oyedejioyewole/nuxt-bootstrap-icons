@@ -4,6 +4,23 @@ description: Don't miss out on improvements and new features
 
 # Release Notes
 
+## v2.1.0
+
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v2.0.2...v2.1.0)
+
+### 🚀 Enhancements
+
+- Added support for {} in name prop ✨ ([4985a0a](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/4985a0a))
+
+### 📖 Documentation
+
+- ✂️ Removed usage section for aside notices ([9ebf94d](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/9ebf94d))
+- Simplified site layout 🎨 ([85db8ad](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/85db8ad))
+
+### ❤️ Contributors
+
+- Oyedejioyewole ([@oyedejioyewole](http://github.com/oyedejioyewole))
+
 ## v2.0.2
 
 [compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v2.0.1...v2.0.2)
