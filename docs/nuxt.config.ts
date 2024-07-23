@@ -28,9 +28,5 @@ export default defineNuxtConfig({
   ],
   notivue: { position: "bottom-right" },
   site: { url: "https://nuxt-bootstrap-icons.vercel.app" },
-  routeRules: {
-    "/": { prerender: true },
-  },
   tailwindcss: { exposeConfig: true },
-  compatibilityDate: "2024-07-08",
 });
