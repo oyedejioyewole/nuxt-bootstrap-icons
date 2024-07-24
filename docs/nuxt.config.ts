@@ -1,5 +1,9 @@
 export default defineNuxtConfig({
   bootstrapIcons: { showList: true },
+  build: {
+    transpile: ["shiki"],
+  },
+  compatibilityDate: "2024-07-24",
   content: {
     defaultLocale: "en-US",
     highlight: {
