@@ -1,23 +1,23 @@
 <template>
-  <pre
-    class="blob-hide flex justify-between overflow-x-auto rounded-lg border border-primary-900 bg-primary-200 bg-opacity-50 p-5 text-sm backdrop-blur-sm transition-[border] hover:bg-opacity-100 dark:border-primary-100 dark:border-opacity-50 dark:bg-primary-800 dark:hover:border-opacity-100 lg:p-7"
-    :class="$props.class"
+  <button
+    class="rounded-lg border border-primary-900 px-5 py-3 hover:bg-primary-900/10 dark:border-primary-100 dark:hover:bg-primary-100/10"
+    @click="copyCode()"
   >
-  <slot />
-
-
-  <button class="group hidden lg:flex gap-x-2" @click="useClipboardContent($props.code as string)">
-    <BootstrapIcon class="h-fit" name="copy" type="button"  />
-    <span class="group-hover:block hidden">Copy</span>
+    <pre
+      class="flex gap-x-10 text-left text-sm text-primary-900 dark:text-primary-100"
+      :class="props.class"
+    >
+      <slot />
+      <BootstrapIcon name="copy" />
+    </pre>
   </button>
-  </pre>
 </template>
 
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   code: {
     type: String,
-    default: "",
+    default: '',
   },
   language: {
     type: String,
@@ -39,15 +39,12 @@ defineProps({
     type: String,
     default: null,
   },
-});
-</script>
+})
 
-<style lang="scss">
-pre {
-  code {
-    .line {
-      @apply block;
-    }
-  }
+const { copy } = useClipboard({ source: props.code })
+
+const copyCode = () => {
+  copy()
+  push.info('Check your clipboard :)')
 }
-</style>
+</script>

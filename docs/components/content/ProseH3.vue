@@ -1,17 +1,23 @@
 <template>
-  <UIHeadings level="h3" :id="id">
-    <a v-if="id && generate" :href="`#${id}`">
+  <h3
+    :id="id"
+    class="font-serif text-3xl"
+  >
+    <a
+      v-if="$props.id && generate"
+      :href="`#${id}`"
+    >
       <slot />
     </a>
     <slot v-else />
-  </UIHeadings>
+  </h3>
 </template>
 
 <script setup lang="ts">
-import { computed, useRuntimeConfig } from "#imports";
+import { computed, useRuntimeConfig } from '#imports'
 
-const props = defineProps<{ id?: string }>();
+const props = defineProps<{ id?: string }>()
 
-const { headings } = useRuntimeConfig().public.mdc;
-const generate = computed(() => props.id && headings?.anchorLinks?.h3);
+const { headings } = useRuntimeConfig().public.mdc
+const generate = computed(() => props.id && headings?.anchorLinks?.h3)
 </script>

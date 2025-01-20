@@ -1,3 +1,5 @@
 <template>
-  <li class="space-y-4"><slot /></li>
+  <li>
+    <slot />
+  </li>
 </template>

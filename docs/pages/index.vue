@@ -1,69 +1,58 @@
 <script lang="ts" setup>
-import { pastelTheme, type NotivueTheme } from "notivue";
+useHead({
+  title: 'Home',
+})
 
-import "notivue/animations.css";
-import "notivue/notifications.css";
+const { copy } = useClipboard()
 
-type ColorTheme = "dark" | "light";
+function openNavigation() {
+  const navigation = document.querySelector('dialog')
+  if (!navigation) return
 
-defineOgImageComponent("Page");
+  navigation.showModal()
+}
 
-const colorTheme = useColorMode();
-const shades = getColorShades("primary");
-const theme = ref<NotivueTheme>();
-
-onMounted(() => useToggleNotivueTheme(colorTheme.value as ColorTheme));
-
-watch(colorTheme, (_new) => useToggleNotivueTheme(_new.value as ColorTheme));
-
-/**
- * This function toggles the theme of notifications
- * between 'dark' and 'light'
- */
-
-function useToggleNotivueTheme(_theme: ColorTheme) {
-  const defaults: { dark: NotivueTheme; light: NotivueTheme } = {
-    dark: {
-      ...pastelTheme,
-      "--nv-success-accent": shades[900],
-      "--nv-success-bg": shades[300],
-      "--nv-success-fg": shades[900],
-    },
-    light: {
-      ...pastelTheme,
-      "--nv-success-accent": shades[900],
-      "--nv-success-bg": shades[300],
-      "--nv-success-fg": shades[900],
-    },
-  };
-
-  if (_theme === "dark") theme.value = defaults.dark;
-  else theme.value = defaults.light;
+function copySetupCode(code: string) {
+  copy(code).then(() => push.info('Check your clipboard :)'))
 }
 </script>
 
 <template>
-  <!-- Full-screen hero -->
-  <Hero />
+  <NuxtLayout>
+    <div class="flex h-full flex-col items-center justify-center gap-y-6">
+      <h1
+        class="font-serif text-5xl text-primary-900 2xl:text-7xl dark:text-primary-100"
+      >
+        Bootstrap Icons meets Nuxt
+      </h1>
 
-  <!-- Documentation -->
-  <ContentDoc
-    class="mx-auto space-y-8 py-20 lg:w-3/4"
-    id="documentation"
-    tag="section"
-  />
+      <p class="text-primary-900 dark:text-primary-100">
+        <b>PS:</b> Click the code block below to copy
+      </p>
 
-  <Notivue v-slot="item">
-    <Notifications :item="item" :theme="theme" />
-  </Notivue>
+      <div class="flex justify-center gap-x-4">
+        <button
+          class="flex items-center justify-center gap-x-4 border border-primary-900 px-10 py-3 text-primary-900 hover:bg-primary-900/10 dark:border-primary-100 dark:text-primary-100 dark:hover:bg-primary-100/10 rounded-lg"
+          @click="copySetupCode($refs['setup-code'].innerHTML)"
+        >
+          <span class="sr-only">Copy code</span>
+
+          <code ref="setup-code">pnpm dlx nuxi add module nuxt-bootstrap-icons</code>
+
+          <BootstrapIcon name="copy" />
+        </button>
+
+        <button
+          class="inline-flex items-center gap-x-4 border border-dashed border-primary-900 px-5 py-3 text-primary-900 hover:border-solid hover:bg-primary-900/10 md:hidden dark:border-primary-100 dark:text-primary-100 dark:hover:bg-primary-100/10"
+          @click="openNavigation"
+        >
+          <BootstrapIcon name="arrows-angle-expand" /> Menu
+        </button>
+      </div>
+    </div>
+
+    <template #extra>
+      <AppIconSlide />
+    </template>
+  </NuxtLayout>
 </template>
-
-<style lang="scss">
-#documentation {
-  h4 {
-    code {
-      @apply rounded-lg p-3;
-    }
-  }
-}
-</style>

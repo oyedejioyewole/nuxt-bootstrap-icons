@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 const { data } = await useAsyncData(() =>
-  queryCollection('content').path('/release-notes').first(),
+  queryCollection('content').path('/docs').first(),
 )
 </script>
 
 <template>
   <div>
     <Head>
-      <Title>{{ data?.title ?? "" }}</Title>
+      <Title>{{ data?.title ?? '' }}</Title>
     </Head>
 
     <NuxtLayout name="page">

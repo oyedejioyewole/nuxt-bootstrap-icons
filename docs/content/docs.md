@@ -1,6 +1,7 @@
-# Documentation
-
-:-P An easier way of using [bootstrap-icons](https://icons.getbootstrap.com) for your Nuxt project!
+---
+title: Documentation
+description: :-P An easier way of using bootstrap-icons for your Nuxt project!
+---
 
 ## Setup
 
@@ -28,7 +29,6 @@ You can configure the module using the `bootstrapIcons` key in your `nuxt.config
 
 1. **Default**: `inline`
 2. **Description**: How should the module register the icons?
-3. **Type**: `String`
 
 ```ts
 export default defineNuxtConfig({
@@ -50,13 +50,10 @@ export default defineNuxtConfig({
 <BootstrapIcon0Circle />
 ```
 
-<br>
-
 #### `prefix`
 
 1. **Default:** `bootstrap-icon`
 2. **Description:** What should be prefixed to the icons?
-3. **Type:** `String`
 
 ```ts
 export default defineNuxtConfig({
@@ -68,16 +65,10 @@ export default defineNuxtConfig({
 
 **Tip**: if you have a multi word prefix, you should include a &mdash; between the words.
 
-<br>
-
 #### `showList`
 
 1. **Default:** `false`
-2. **Description:** Option: enable to add a virtual JSON file containing all the icons registered at path
-
-   `#build/nuxt-bootstrap-icons.json`
-
-3. **Type:** `Boolean`
+2. **Description:** Option: enable to add a virtual JSON file containing all the icons registered at path `#build/nuxt-bootstrap-icons.json`
 
 ```ts
 export default defineNuxtConfig({

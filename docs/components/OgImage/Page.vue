@@ -1,16 +1,21 @@
 <script lang="ts" setup>
-defineProps<{ description: string; title: string }>();
+defineProps<{ description: string, title: string }>()
 
-const shades = getColorShades("primary");
+const shades = getColorShades('primary')
 </script>
 
 <template>
-  <div class="w-full" :style="{ background: shades[200] }">
+  <div
+    class="w-full"
+    :style="{ background: shades[200] }"
+  >
     <div class="relative mx-auto h-screen w-[90%] py-20">
       <h1 class="text-5xl font-extrabold">
         {{ title }}
       </h1>
-      <p class="text-4xl">{{ description }}</p>
+      <p class="text-4xl">
+        {{ description }}
+      </p>
 
       <div
         class="absolute bottom-20 right-10 h-[200px] w-[200px] rounded-full"

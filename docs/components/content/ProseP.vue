@@ -1,3 +1,5 @@
 <template>
-  <p class="text-pretty text-lg leading-loose tracking-wide"><slot /></p>
+  <p class="text-pretty leading-loose tracking-wide">
+    <slot />
+  </p>
 </template>

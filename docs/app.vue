@@ -1,19 +1,42 @@
 <script lang="ts" setup>
+import 'notivue/animations.css'
+import 'notivue/notification.css'
+
+import { pastelTheme } from 'notivue'
+
 useHead({
   htmlAttrs: {
-    lang: "en",
+    lang: 'en',
   },
-  titleTemplate: "%s · nuxt-bootstrap-icons",
-});
+  titleTemplate: '%s · nuxt-bootstrap-icons',
+})
+
+const shades = getColorShades('primary')
 
 onMounted(async () => {
-  const locomotive = await import("locomotive-scroll");
-  new locomotive.default();
-});
+  const locomotiveScroll = await import('locomotive-scroll').then(
+    resolvedPackage => resolvedPackage.default,
+  )
+  new locomotiveScroll()
+})
 </script>
 
 <template>
-  <NuxtLayout>
+  <div class="min-h-screen bg-primary-50 dark:bg-primary-950">
+    <!-- Loading indicator -->
+    <NuxtLoadingIndicator
+      :color="$colorMode.value === 'dark' ? shades[100] : shades[900]"
+    />
+
     <NuxtPage />
-  </NuxtLayout>
+
+    <Notivue v-slot="item">
+      <Notification
+        :item="item"
+        :theme="pastelTheme"
+      />
+    </Notivue>
+
+    <NuxtRouteAnnouncer />
+  </div>
 </template>
