@@ -4,6 +4,30 @@ description: Don't miss out on improvements and new features
 
 # Release Notes
 
+## v2.1.1
+
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v2.1.0...v2.1.1)
+
+### 🩹 Fixes
+
+- **docs:** Properly integrated supported modules ⚒️ ([a52026a](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/a52026a))
+- **docs:** 🔍 Pre-render content routes ([2bf0bb3](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/2bf0bb3))
+- **docs:** ✂️ Removed "compatibilityDate" option ([9358839](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/9358839))
+- **docs:** ⚒️ Added 'shiki' to transpile ([37463c6](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/37463c6))
+
+### 💅 Refactors
+
+- **module:** Format with eslint rules 🖊️ ([a0c98f5](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/a0c98f5))
+- **module:** Modify release commands 🖊️ ([5827f5e](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/5827f5e))
+
+### 📖 Documentation
+
+- Redesign layout of pages 🖌 ([9c5f443](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/9c5f443))
+
+### ❤️ Contributors
+
+- Oyedejioyewole ([@oyedejioyewole](http://github.com/oyedejioyewole))
+
 ## v2.1.0
 
 [compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v2.0.2...v2.1.0)
