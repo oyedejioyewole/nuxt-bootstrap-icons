@@ -18,14 +18,12 @@
     "dist"
   ],
   "scripts": {
-    "dev:prepare": " nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare docs",
-    "docs:build": "pnpm --filter docs build",
-    "docs:dev": "pnpm --filter docs dev",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare docs",
+    "docs:build": "npm run build --workspace=docs",
+    "docs:dev": "npm run dev --workspace=docs",
     "lint": "eslint .",
-    "prepack": "nuxt-module-build build && pnpm lint",
-    "release:major": "changelogen --release --major --output docs/content/release-notes.md && git push --follow-tags && npm publish",
-    "release:minor": "changelogen --release --minor --output docs/content/release-notes.md && git push --follow-tags && npm publish",
-    "release:patch": "changelogen --release --patch --output docs/content/release-notes.md && git push --follow-tags && npm publish"
+    "prepack": "nuxt-module-build build",
+    "release": "npm run lint && changelogen --release --output docs/content/release-notes.md && git push --follow-tags && npm publish"
   },
   "dependencies": {
     "@nuxt/kit": "^3.15.2",
@@ -42,7 +40,6 @@
     "changelogen": "^0.5.7",
     "eslint": "^9.18.0",
     "nuxt": "^3.15.2",
-    "typescript": "^5.7.3"
-  },
-  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
+    "typescript": "~5.7.3"
+  }
 }

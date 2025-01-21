@@ -7,8 +7,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     'notivue/nuxt',
-    'nuxt-bootstrap-icons',
     'nuxt-og-image',
+    '../src/module',
   ],
   devtools: { enabled: true },
   vue: {
