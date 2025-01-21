@@ -34,11 +34,6 @@ export default defineNuxtConfig({
     transpile: ['shiki'],
   },
   compatibilityDate: '2025-01-18',
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-    },
-  },
   bootstrapIcons: { showList: true },
   googleFonts: {
     families: {
