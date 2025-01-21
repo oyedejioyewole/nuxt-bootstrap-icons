@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     'notivue/nuxt',
-    'nuxt-og-image',
+    // 'nuxt-og-image',
     '../src/module',
   ],
   devtools: { enabled: true },
@@ -16,7 +16,7 @@ export default defineNuxtConfig({
       isCustomElement: tag => tag.startsWith('swiper-'),
     },
   },
-  site: { url: 'https://nuxt-bootstrap-icons.vercel.app' },
+  // site: { url: 'https://nuxt-bootstrap-icons.vercel.app' },
   content: {
     build: {
       markdown: {
@@ -28,6 +28,10 @@ export default defineNuxtConfig({
           depth: 4,
         },
       },
+    },
+    database: {
+      type: 'postgres',
+      url: process.env.POSTGRES_URL ?? '',
     },
   },
   build: {
