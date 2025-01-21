@@ -4,6 +4,18 @@ description: Don't miss out on improvements and new features
 
 # Release Notes
 
+## v2.1.2
+
+[compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v2.1.1...v2.1.2)
+
+### 🩹 Fixes
+
+- **module:** Fix compilation error on prepack 🔧 ([9a44b95](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/commit/9a44b95))
+
+### ❤️ Contributors
+
+- Oyedejioyewole ([@oyedejioyewole](http://github.com/oyedejioyewole))
+
 ## v2.1.1
 
 [compare changes](https://github.com/oyedejioyewole/nuxt-bootstrap-icons/compare/v2.1.0...v2.1.1)
