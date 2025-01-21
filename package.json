@@ -19,8 +19,8 @@
   ],
   "scripts": {
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare docs",
-    "docs:build": "npm run build --workspace=docs",
-    "docs:dev": "npm run dev --workspace=docs",
+    "docs:build": "nuxi build docs",
+    "docs:dev": "nuxi dev docs",
     "lint": "eslint .",
     "prepack": "nuxt-module-build build",
     "release": "npm run lint && changelogen --release --output docs/content/release-notes.md && git push --follow-tags && npm publish"
@@ -41,8 +41,5 @@
     "eslint": "^9.18.0",
     "nuxt": "^3.15.2",
     "typescript": "~5.7.3"
-  },
-  "workspaces": [
-    "docs"
-  ]
+  }
 }
