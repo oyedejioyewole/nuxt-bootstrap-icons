@@ -8,7 +8,7 @@ description: :-P An easier way of using bootstrap-icons for your Nuxt project!
 Run the following command to install and add the module to your project:
 
 ```bash
-$ pnpm dlx nuxi@latest module add nuxt-bootstrap-icons
+pnpm dlx nuxi@latest module add nuxt-bootstrap-icons
 ```
 
 **Aside #1**: I know I'm being preferential in my choice of package managers.

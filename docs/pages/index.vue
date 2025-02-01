@@ -3,52 +3,42 @@ useHead({
   title: 'Home',
 })
 
+const setupCode = 'npx nuxi module add nuxt-bootstrap-icons'
+
 const { copy } = useClipboard()
-
-function openNavigation() {
-  const navigation = document.querySelector('dialog')
-  if (!navigation) return
-
-  navigation.showModal()
-}
-
-function copySetupCode(code: string) {
-  copy(code).then(() => push.info('Check your clipboard :)'))
-}
 </script>
 
 <template>
   <NuxtLayout>
-    <div class="flex h-full flex-col items-center justify-center gap-y-6">
+    <div class="flex h-full flex-col lg:items-center justify-center gap-y-6">
       <h1
-        class="font-serif text-5xl text-primary-900 2xl:text-7xl dark:text-primary-100"
+        class="font-serif text-4xl text-primary-900 lg:text-5xl 2xl:text-6xl dark:text-primary-100"
       >
-        Bootstrap Icons meets Nuxt
+        Bootstrap Icons meets
+        <span
+          class="underline decoration-dotted underline-offset-8 hover:decoration-solid"
+        >Nuxt</span>
       </h1>
 
-      <p class="text-primary-900 dark:text-primary-100">
-        <b>PS:</b> Click the code block below to copy
+      <p class="text-primary-900 2xl:text-lg dark:text-primary-100">
+        An easier way of using bootstrap-icons in your Nuxt project!
       </p>
 
-      <div class="flex justify-center gap-x-4">
-        <button
-          class="flex items-center justify-center gap-x-4 border border-primary-900 px-10 py-3 text-primary-900 hover:bg-primary-900/10 dark:border-primary-100 dark:text-primary-100 dark:hover:bg-primary-100/10 rounded-lg"
-          @click="copySetupCode($refs['setup-code'].innerHTML)"
-        >
-          <span class="sr-only">Copy code</span>
+      <button
+        class="flex items-center justify-between rounded-lg border border-primary-900 px-5 py-3 text-primary-900 hover:bg-primary-900/10 lg:w-1/2 2xl:w-1/4 dark:border-primary-100 dark:text-primary-100 dark:hover:bg-primary-100/10"
+        @click="
+          copy(setupCode).then(() => push.info('Check your clipboard :)'))
+        "
+      >
+        <code class="text-left text-xs 2xl:text-lg">{{ setupCode }}</code>
 
-          <code ref="setup-code">pnpm dlx nuxi add module nuxt-bootstrap-icons</code>
+        <BootstrapIcon
+          name="copy"
+          class="text-sm"
+        />
 
-          <BootstrapIcon name="copy" />
-        </button>
-
-        <button
-          class="inline-flex items-center gap-x-4 border border-dashed border-primary-900 px-5 py-3 text-primary-900 hover:border-solid hover:bg-primary-900/10 md:hidden dark:border-primary-100 dark:text-primary-100 dark:hover:bg-primary-100/10"
-          @click="openNavigation"
-        >
-          <BootstrapIcon name="arrows-angle-expand" /> Menu
-        </button>
-      </div>
+        <span class="sr-only">Copy code</span>
+      </button>
     </div>
 
     <template #extra>

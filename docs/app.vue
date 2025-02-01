@@ -8,7 +8,7 @@ useHead({
   htmlAttrs: {
     lang: 'en',
   },
-  titleTemplate: '%s · nuxt-bootstrap-icons',
+  titleTemplate: '%s · Bootstrap Icons for Nuxt',
 })
 
 const shades = getColorShades('primary')

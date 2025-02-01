@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { breakpointsTailwind } from '@vueuse/core'
-
 const routes = computed(() => {
   const route = useRoute()
 
@@ -15,24 +13,11 @@ const routes = computed(() => {
     isCurrentPage: _route.path === route.path,
   }))
 })
-
-const colorTheme = useColorMode()
-
-const { state, next: nextTheme } = useCycleList(['light', 'dark'], {
-  initialValue: colorTheme.value,
-})
-
-const breakpoints = useBreakpoints(breakpointsTailwind)
-
-watch(state, (_new) => {
-  colorTheme.preference = _new
-})
 </script>
 
 <template>
   <nav
-    v-if="breakpoints.greaterOrEqual('lg')"
-    class="basis-[20%] border-r border-dashed border-primary-900 text-primary-900 dark:border-primary-100 dark:text-primary-100"
+    class="hidden basis-[20%] border-r border-dashed border-primary-900 text-primary-900 lg:block dark:border-primary-100 dark:text-primary-100"
   >
     <div class="sticky top-1/2 mx-10 -translate-y-1/2 space-y-10">
       <ul class="space-y-2">
@@ -59,88 +44,116 @@ watch(state, (_new) => {
 
       <hr class="border-primary-900 dark:border-primary-100">
 
-      <ul>
+      <ul class="space-y-4">
         <li>
-          <button
-            class="inline-flex h-10 w-full items-center justify-center gap-x-2 border border-primary-900 text-sm hover:bg-primary-900/10 dark:border-primary-100 dark:text-primary-100 dark:hover:bg-primary-100/10 rounded-lg"
-            @click="nextTheme()"
+          <NuxtLink
+            to="https://github.com/oyedejioyewole/nuxt-bootstrap-icons"
+            target="_blank"
+            class="inline-flex h-10 text-sm w-full items-center gap-x-2 rounded-lg border border-primary-900 px-3 hover:bg-primary-900/10 dark:border-primary-100 dark:hover:bg-primary-100/10"
           >
-            Change theme
+            <BootstrapIcon name="star" />
 
-            <ClientOnly>
-              <BootstrapIcon
-                :name="{
-                  'sun': $colorMode.value === 'light',
-                  'moon-stars': $colorMode.value === 'dark',
-                }"
-              />
+            Star on GitHub
+          </NuxtLink>
+        </li>
 
-              <template #fallback>
-                <BootstrapIcon name="slash-circle" />
-              </template>
-            </ClientOnly>
-          </button>
+        <li>
+          <select
+            v-model="$colorMode.preference"
+            class="h-10 w-full cursor-pointer appearance-none rounded-lg border border-primary-900 bg-transparent px-3 text-sm hover:bg-primary-900/10 dark:border-primary-100 dark:hover:bg-primary-100/10"
+          >
+            <option value="system">
+              <BootstrapIcon name="pc-display" />
+              🖥 system
+            </option>
+            <option value="light">
+              ☀️ light
+            </option>
+            <option value="dark">
+              🌙 dark
+            </option>
+          </select>
         </li>
       </ul>
     </div>
   </nav>
 
-  <dialog
-    v-else
-    ref="navigation"
-    class="block w-1/2 border border-dashed border-primary-900 bg-primary-50 md:hidden 2xl:w-1/3 dark:border-primary-100 dark:bg-primary-950"
+  <div
+    class="order-last text-primary-900 lg:order-first lg:hidden dark:text-primary-100"
   >
-    <nav class="flex w-full items-center justify-around p-10">
-      <!-- 1st item -->
-      <ul class="space-y-4 text-primary-900 dark:text-primary-100">
-        <li
-          v-for="(route, index) of routes"
-          :key="index"
-        >
+    <div class="flex items-center justify-between space-x-4">
+      <button
+        class="inline-flex h-10 items-center gap-x-2 rounded-lg border border-primary-900 px-3 text-sm hover:bg-primary-900/10 dark:border-primary-100 hover:dark:bg-primary-100/10"
+        @click="$refs.navigation.showModal"
+      >
+        <BootstrapIcon name="chevron-up" />
+
+        Open menu
+      </button>
+
+      <select
+        v-model="$colorMode.preference"
+        class="h-10 cursor-pointer appearance-none rounded-lg border border-primary-900 bg-transparent px-3 text-sm hover:bg-primary-900/10 dark:border-primary-100 dark:hover:bg-primary-100/10"
+      >
+        <option value="system">
+          <BootstrapIcon name="pc-display" />
+          🖥 system
+        </option>
+        <option value="light">
+          ☀️ light
+        </option>
+        <option value="dark">
+          🌙 dark
+        </option>
+      </select>
+    </div>
+
+    <dialog
+      ref="navigation"
+      class="h-screen w-full rounded-lg border border-primary-900 bg-primary-100 dark:border-primary-100 dark:bg-primary-900"
+    >
+      <nav class="mx-auto flex h-full w-[90%] flex-col justify-around">
+        <ul>
+          <!-- 1st item -->
+          <li
+            v-for="(route, index) of routes"
+            :key="index"
+          >
+            <NuxtLink
+              :to="route.path"
+              class="inline-flex h-10 w-full items-center gap-x-2 rounded-lg px-3"
+              :class="{
+                'bg-primary-900/10 font-bold dark:bg-primary-100/10':
+                  $route.path === route.path,
+              }"
+            >
+              <BootstrapIcon :name="route.icon" />
+
+              {{ route.name }}</NuxtLink>
+          </li>
+        </ul>
+
+        <div class="flex flex-col gap-y-4">
           <NuxtLink
-            :to="route.path"
-            class="inline-flex gap-x-4 text-2xl font-bold decoration-wavy underline-offset-8 hover:underline"
+            to="https://github.com/oyedejioyewole/nuxt-bootstrap-icons"
+            target="_blank"
+            class="inline-flex h-10 items-center justify-center gap-x-2 rounded-lg px-3 hover:bg-primary-900/10 dark:hover:bg-primary-100/10"
           >
-            <BootstrapIcon
-              :name="{
-                'triangle-half': route.isCurrentPage,
-                'triangle': !route.isCurrentPage,
-              }"
-              class="rotate-[90deg] text-xl"
-            />
+            <BootstrapIcon name="star" />
 
-            {{ route.name }}</NuxtLink>
-        </li>
-      </ul>
+            Star on GitHub
+          </NuxtLink>
 
-      <!-- 2nd item -->
-      <ul class="space-y-4">
-        <li>
           <button
-            class="inline-flex h-10 w-[140px] items-center justify-around border border-dashed border-primary-900 text-primary-900 hover:border-solid hover:bg-primary-900/10 dark:border-primary-100 dark:text-primary-100 dark:hover:bg-primary-100/10"
-            @click="$refs.navigation.close()"
+            autofocus
+            class="inline-flex h-10 items-center justify-center gap-x-2 rounded-lg border border-primary-900 px-3 text-sm font-bold hover:bg-primary-900/10 dark:border-primary-100 dark:hover:bg-primary-100/10"
+            @click="$refs['navigation'].close"
           >
-            Close menu
             <BootstrapIcon name="x-lg" />
+            Close navigation
           </button>
-        </li>
-
-        <li>
-          <button
-            class="inline-flex h-10 w-[150px] items-center justify-around border border-dashed border-primary-900 hover:border-solid hover:bg-primary-900/10 dark:border-primary-100 dark:text-primary-100 dark:hover:bg-primary-100/10"
-            @click="nextTheme()"
-          >
-            Change theme
-            <BootstrapIcon
-              :name="{
-                'sun': state === 'light',
-                'moon-stars': state === 'dark',
-                'pc-display': state === 'system',
-              }"
-            />
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </dialog>
+        </div>
+      </nav>
+    </dialog>
+  </div>
 </template>

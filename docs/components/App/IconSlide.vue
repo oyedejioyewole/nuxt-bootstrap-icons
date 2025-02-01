@@ -14,11 +14,17 @@ watch(slides, (_new) => {
       reverseDirection: true,
     },
     breakpoints: {
-      1024: {
+      '@0.00': {
+        slidesPerView: 2,
+      },
+      '@0.75': {
+        slidesPerView: 3,
+      },
+      '@1.00': {
         direction: 'vertical',
+        slidesPerView: 3,
       },
     },
-    slidesPerView: 3,
     spaceBetween: 30,
     on: {
       activeIndexChange: () => refresh(),
@@ -35,27 +41,29 @@ register()
   <ClientOnly>
     <swiper-container
       ref="slides"
-      class="basis-[15%]"
+      class="order-first w-full lg:order-last lg:basis-[15%]"
       init="false"
     >
       <swiper-slide
         v-for="(icon, index) of data"
         :key="index"
-        class="flex items-center justify-center border-dashed border-primary-900 hover:border-solid hover:bg-primary-900/10 lg:border dark:border-primary-100 dark:hover:bg-primary-100/10 rounded-l-lg"
+        class="flex items-center justify-center rounded-lg border border-primary-900 p-10 text-primary-900 lg:rounded-l-lg lg:border-dashed lg:hover:border-solid lg:hover:bg-primary-900/10 dark:border-primary-100 dark:text-primary-100 dark:hover:bg-primary-100/10"
       >
         <BootstrapIcon
-          class="text-5xl text-primary-900 dark:text-primary-100"
+          class="text-3xl lg:text-5xl 2xl:text-7xl"
           :name="icon"
         />
       </swiper-slide>
     </swiper-container>
 
     <template #fallback>
-      <div class="flex flex-col gap-y-[30px] w-[15%]">
+      <div
+        class="order-first flex flex-row gap-y-[30px] lg:order-last lg:basis-[15%] lg:flex-col"
+      >
         <div
           v-for="(_, index) in 3"
           :key="index"
-          class="h-1/3 w-full bg-primary-900/10 rounded-lg"
+          class="h-1/3 w-1/3 rounded-lg bg-primary-900/10 lg:h-1/3 lg:w-full"
         />
       </div>
     </template>

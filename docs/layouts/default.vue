@@ -1,8 +1,8 @@
 <template>
-  <main class="flex h-screen w-full flex-col lg:flex-row">
+  <main class="flex h-screen w-[90%] lg:w-full mx-auto flex-col lg:flex-row justify-around">
     <AppNavigation />
 
-    <section class="basis-[65%]">
+    <section class="lg:basis-[65%]">
       <slot />
     </section>
 

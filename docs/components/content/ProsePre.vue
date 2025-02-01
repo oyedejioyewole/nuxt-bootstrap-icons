@@ -1,14 +1,13 @@
 <template>
   <button
-    class="rounded-lg border border-primary-900 px-5 py-3 hover:bg-primary-900/10 dark:border-primary-100 dark:hover:bg-primary-100/10"
+    class="max-w-full overflow-x-auto rounded-lg border border-primary-900 hover:bg-primary-900/10 dark:border-primary-100 dark:hover:bg-primary-100/10"
     @click="copyCode()"
   >
     <pre
-      class="flex gap-x-10 text-left text-sm text-primary-900 dark:text-primary-100"
+      class="flex items-center p-3 text-left text-sm"
       :class="props.class"
     >
       <slot />
-      <BootstrapIcon name="copy" />
     </pre>
   </button>
 </template>
