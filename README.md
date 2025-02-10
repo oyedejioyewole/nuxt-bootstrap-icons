@@ -27,9 +27,15 @@ That's it! You can now use `nuxt-bootstrap-icons` in your Nuxt app ✨
 
 ## Contributing
 
-You can contribute to this module with StackBlitz:
-
-[![Edit oyedejioyewole/nuxt-bootstrap-icons/main][playground-src]][playground-href]
+#### ☁ Contribute with Cloud IDEs
+[![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visualstudiocode)](https://vscode.dev/github/oyedejioyewole/nuxt-bootstrap-icons)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/oyedejioyewole/nuxt-bootstrap-icons)
+[![Open in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/embed/react-markdown-preview-co1mj?fontsize=14&hidenavigation=1&theme=dark)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/oyedejioyewole/nuxt-bootstrap-icons)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oyedejioyewole/nuxt-bootstrap-icons?template=node&title=ngx-vcard%20Example)
+[![Open in Repl.it](https://replit.com/badge/github/withastro/astro)](https://replit.com/github/oyedejioyewole/nuxt-bootstrap-icons)
+[![Open in Glitch](https://img.shields.io/badge/Open%20in-Glitch-blue?logo=glitch)](https://glitch.com/edit/#!/import/github/oyedejioyewole/nuxt-bootstrap-icons)
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/oyedejioyewole/nuxt-bootstrap-icons)
 
 or locally for either
 
