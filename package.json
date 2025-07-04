@@ -2,7 +2,10 @@
   "name": "nuxt-bootstrap-icons",
   "version": "3.0.0",
   "description": "An easier way of using bootstrap-icons in your Nuxt project!",
-  "repository": "oyedejioyewole/nuxt-bootstrap-icons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oyedejioyewole/nuxt-bootstrap-icons.git"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {
