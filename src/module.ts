@@ -12,19 +12,17 @@ import { kebabCase } from 'change-case'
 //  Module options TypeScript interface definition
 export interface ModuleOptions {
   /**
-   * What should be prefixed to the icons?
+   * This key allows you to set the prefix for the component registered by the module.
    *
    * @default "bootstrap-icon"
-   * @link https://nuxt-bootstrap-icons.vercel.app#prefix
    */
   prefix: string
 
   /**
-   * Enable to add a virtual JSON file containing all the icons registered at path
-   * `#build/nuxt-bootstrap-icons.json`
+   * This key toggles whether a virtual file containing a list of all the icons name should be registered.
+   * The virtual file can be imported from `#build/nuxt-bootstrap-icons.json`
    *
    * @default false
-   * @link https://nuxt-bootstrap-icons.vercel.app#showlist
    */
   showList: boolean
 }
