@@ -8,7 +8,7 @@ description: This site explains how to use the nuxt-bootstrap-icons module.
 Run the following command to add the module to your project:
 
 ```bash [>_]
-$ npx nuxi module add nuxt-bootstrap-icons
+$ npx nuxi@latest module add nuxt-bootstrap-icons
 ```
 
 Congratulations 🎉, you have successfully added the module to your project and can now browser [**bootstrap-icons**](https://icons.getbootstrap.com){.font-cursive} for use in your project
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
 })
 ```
 
-**Default value:** `bootstrap-icons`
+**Default value:** `bootstrap-icon`
 
 This key allows you to set the prefix for the component registered by the module.
 

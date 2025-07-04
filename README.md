@@ -4,9 +4,8 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-An easier way of using [bootstrap-icons](https://icons.getbootstrap.com) in [Nuxt](https://nuxt.com) project!
+An easier way of using [bootstrap-icons](https://icons.getbootstrap.com) in your [Nuxt](https://nuxt.com) project!
 
-- [✨ &nbsp;Release Notes](https://nuxt-bootstrap-icons.vercel.app/release-notes)
 - [🏀 Online playground][playground-href]
 - [📖 &nbsp;Documentation](https://nuxt-bootstrap-icons.vercel.app)
 
@@ -31,27 +30,18 @@ You can contribute to this module with StackBlitz:
 
 [![Edit oyedejioyewole/nuxt-bootstrap-icons/main][playground-src]][playground-href]
 
-or locally for either
+or locally:
 
 ### Documentation
 
 1. Clone the repository
 2. Install dependencies with `pnpm install`
 3. Setup module for development with `pnpm dev:prepare`
-4. Run development server with `pnpm docs:dev`
+4. Run development server with `pnpm dev`
 
 **Note:** Hosted on Vercel
 
 [![Deploy with Vercel][vercel-src]][vercel-href]
-
-or
-
-### Playground
-
-1. Clone the repository
-2. Install dependencies with `pnpm install`
-3. Setup module for development with `pnpm dev:prepare`
-4. Run development server with `pnpm playground:dev`
 
 <!-- Badges -->
 

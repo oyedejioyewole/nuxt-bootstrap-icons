@@ -7,7 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "test:types": "nuxt typecheck"
   },
   "dependencies": {
     "@nuxt/content": "3.6.2",
@@ -22,8 +22,6 @@
   },
   "devDependencies": {
     "@vueuse/core": "^13.5.0",
-    "@vueuse/nuxt": "^13.5.0",
-    "prettier": "^3.6.2",
-    "prettier-plugin-tailwindcss": "^0.6.13"
+    "@vueuse/nuxt": "^13.5.0"
   }
 }
