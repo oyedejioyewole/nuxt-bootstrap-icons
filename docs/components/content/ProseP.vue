@@ -1,5 +1,5 @@
 <template>
-  <p class="text-pretty leading-loose tracking-wide">
+  <p class="text-balance">
     <slot />
   </p>
 </template>

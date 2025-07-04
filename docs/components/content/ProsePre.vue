@@ -1,19 +1,21 @@
 <template>
-  <button
-    class="max-w-full overflow-x-auto rounded-lg border border-primary-900 hover:bg-primary-900/10 dark:border-primary-100 dark:hover:bg-primary-100/10"
-    @click="copyCode()"
+  <div
+    class="bg-primary-200/50 dark:bg-primary-800/50 space-y-4 rounded-lg px-4 py-2 md:max-w-1/2"
   >
+    <p class="inline-flex w-full items-center justify-between text-sm">
+      <span class="font-bold">{{ $props.language }}</span>
+      <span class="font-cursive font-bold">{{ $props.filename }}</span>
+    </p>
+
     <pre
-      class="flex items-center p-3 text-left text-sm"
-      :class="props.class"
-    >
-      <slot />
-    </pre>
-  </button>
+      class="text-sm overflow-x-scroll"
+      :class="$props.class"
+    ><slot /></pre>
+  </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   code: {
     type: String,
     default: '',
@@ -39,11 +41,10 @@ const props = defineProps({
     default: null,
   },
 })
-
-const { copy } = useClipboard({ source: props.code })
-
-const copyCode = () => {
-  copy()
-  push.info('Check your clipboard :)')
-}
 </script>
+
+<style>
+pre code .line {
+  display: block;
+}
+</style>

@@ -1,11 +1,7 @@
 <template>
-  <main class="flex h-screen w-[90%] lg:w-full mx-auto flex-col lg:flex-row justify-around">
-    <AppNavigation />
+  <div class="w-9/10 mx-auto">
+    <AppNavigation class="flex justify-between items-center py-4" />
 
-    <section class="lg:basis-[65%]">
-      <slot />
-    </section>
-
-    <slot name="extra" />
-  </main>
+    <slot />
+  </div>
 </template>

@@ -1,51 +1,48 @@
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
-    '@nuxt/image',
+    '@nuxt/fonts',
     '@nuxtjs/color-mode',
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
-    'notivue/nuxt',
-    // 'nuxt-og-image',
     '../src/module',
   ],
   devtools: { enabled: true },
+  app: {
+    head: {
+      titleTemplate: '%s · nuxt-bootstrap-icons',
+      link: [
+        { rel: 'icon', href: 'favicon.svg' },
+      ],
+    },
+  },
+  css: ['~/assets/css/main.css'],
   vue: {
     compilerOptions: {
       isCustomElement: tag => tag.startsWith('swiper-'),
     },
   },
-  // site: { url: 'https://nuxt-bootstrap-icons.vercel.app' },
+  colorMode: {
+    classSuffix: '',
+  },
   content: {
     build: {
       markdown: {
         highlight: {
-          langs: ['bash', 'ts', 'vue'],
-          theme: { 'dark-mode': 'github-dark', 'default': 'github-light' },
-        },
-        toc: {
-          depth: 4,
+          theme: {
+            dark: 'github-dark',
+            default: 'github-light',
+          },
         },
       },
     },
-    database: {
-      type: 'postgres',
-      url: process.env.POSTGRES_URL ?? '',
-    },
   },
-  build: {
-    transpile: ['shiki'],
+  compatibilityDate: '2024-11-01',
+  vite: {
+    plugins: [tailwindcss()],
   },
-  compatibilityDate: '2025-01-18',
-  bootstrapIcons: { showList: true },
-  googleFonts: {
-    families: {
-      'Courier Prime': true,
-      'Lora': [700],
-      'Open Sans': [400, 500, 600],
-    },
+  bootstrapIcons: {
+    showList: true,
   },
-  notivue: { position: 'bottom-center' },
-  tailwindcss: { exposeConfig: true },
 })
