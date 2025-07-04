@@ -3,36 +3,27 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
-  },
-  "devDependencies": {
-    "@vueuse/core": "^12.4.0",
-    "@vueuse/nuxt": "^12.4.0",
-    "sass": "^1.83.4"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@bobthered/tailwindcss-palette-generator": "^4.0.0",
-    "@nuxt/content": "^3.0.0",
-    "@nuxt/image": "^1.9.0",
-    "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/google-fonts": "^3.2.0",
-    "@nuxtjs/tailwindcss": "^6.13.1",
-    "change-case": "^5.4.4",
-    "floating-vue": "^5.2.2",
-    "gsap": "^3.12.7",
-    "locomotive-scroll": "5.0.0-beta.11",
-    "notivue": "^2.4.5",
-    "nuxt": "^3.15.2",
-    "nuxt-og-image": "4.1.2",
-    "swiper": "^11.2.1",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "@nuxt/content": "3.6.2",
+    "@nuxt/fonts": "0.11.4",
+    "@nuxtjs/color-mode": "3.5.2",
+    "@tailwindcss/vite": "^4.1.11",
+    "nuxt": "^3.17.6",
+    "swiper": "^11.2.10",
+    "tailwindcss": "^4.1.11",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
   },
-  "optionalDependencies": {
-    "@types/locomotive-scroll": "^4.1.4",
-    "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.10"
+  "devDependencies": {
+    "@vueuse/core": "^13.5.0",
+    "@vueuse/nuxt": "^13.5.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.13"
   }
 }

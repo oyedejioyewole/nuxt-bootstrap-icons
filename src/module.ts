@@ -1,25 +1,16 @@
 import { readdirSync } from 'node:fs'
-import { dirname, join, parse } from 'node:path'
+import { dirname, parse } from 'node:path'
 import {
   addComponent,
   addTemplate,
   addTypeTemplate,
   createResolver,
   defineNuxtModule,
-  installModule,
 } from '@nuxt/kit'
 import { kebabCase } from 'change-case'
 
 //  Module options TypeScript interface definition
 export interface ModuleOptions {
-  /**
-   * How should the module register the icons?
-   *
-   * @default 'inline'
-   * @link https://nuxt-bootstrap-icons.vercel.app#display
-   */
-  display: 'inline' | 'component'
-
   /**
    * What should be prefixed to the icons?
    *
@@ -48,61 +39,37 @@ export default defineNuxtModule<ModuleOptions>({
   },
   //  Default configuration options of the Nuxt module
   defaults: {
-    display: 'inline',
     prefix: 'bootstrap-icon',
     showList: false,
   },
   async setup(options) {
+    const prefix = kebabCase(options.prefix)
+
     const { resolve, resolvePath } = createResolver(import.meta.url)
 
-    const paths = {
-      bootstrapIcons: resolve(
+    const path = {
+      icons: resolve(
         dirname(await resolvePath('bootstrap-icons/package.json')),
         'icons',
       ),
       component: resolve('./runtime/components/BootstrapIcon.vue'),
-      typings: resolve('./runtime/_types.d.ts'),
+      typing: resolve('./runtime/_types.d.ts'),
     }
 
-    const prefix = kebabCase(options.prefix)
+    const icons = readdirSync(path.icons).reduce(
+      (accumulator, current) => {
+        const { name: filename } = parse(current)
+        accumulator.push(filename)
 
-    const iconList = readdirSync(paths.bootstrapIcons).map((icon) => {
-      const { name } = parse(icon)
+        return accumulator
+      },
+      [] as string[],
+    )
 
-      return {
-        fullName: `${prefix}-${name}`,
-        name,
-        path: join(paths.bootstrapIcons, icon),
-      }
+    addComponent({
+      filePath: path.component,
+      name: prefix,
     })
-
-    if (options.display === 'component') {
-      await installModule('nuxt-svgo-loader', {
-        svgoConfig: {
-          plugins: [
-            {
-              name: 'preset-default',
-              params: {
-                overrides: {
-                  removeViewBox: false,
-                },
-              },
-            },
-          ],
-        },
-      })
-
-      for (const icon of iconList)
-        await addComponent({
-          filePath: icon.path,
-          name: icon.fullName,
-        })
-    }
-    else
-      await addComponent({
-        filePath: paths.component,
-        name: prefix,
-      })
 
     /**
      * If `options.showList` is enabled, register a
@@ -111,13 +78,13 @@ export default defineNuxtModule<ModuleOptions>({
     if (options.showList)
       addTemplate({
         filename: 'nuxt-bootstrap-icons.json',
-        getContents: () => JSON.stringify(iconList.map(icon => icon.name)),
+        getContents: () => JSON.stringify(icons),
         write: true,
       })
 
     addTypeTemplate({
       filename: 'types/nuxt-bootstrap-icons.d.ts',
-      src: paths.typings,
+      src: path.typing,
     })
   },
 })
