@@ -36,13 +36,17 @@ const features = [
       </ul>
 
       <div class="flex flex-wrap gap-4">
-        <UiButton icon="book">
+        <UiButton
+          icon="book"
+          to="#setup"
+        >
           Get started
         </UiButton>
 
         <UiButton
           icon="github"
           variant="accent"
+          to="https://github.com/oyedejioyewole/nuxt-bootstrap-icons"
         >
           View project
         </UiButton>

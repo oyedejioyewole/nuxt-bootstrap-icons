@@ -10,6 +10,7 @@ const activeTab = ref(1)
       <button
         v-for="(tab, index) of $props.tabs"
         :key="tab"
+        type="button"
         @click="activeTab = index + 1"
       >
         <ProseCode

@@ -22,7 +22,7 @@ const { data: latestRelease } = await useFetch<{ name: string, html_url: string 
           />
         </svg>
 
-        <span class="min-lg:inline-block hidden">nuxt-bootstrap-icons</span>
+        <span class="min-lg:inline-block max-lg:sr-only">nuxt-bootstrap-icons</span>
       </NuxtLink>
 
       <!-- Latest release badge -->
@@ -56,6 +56,8 @@ const { data: latestRelease } = await useFetch<{ name: string, html_url: string 
               />
             </template>
           </ClientOnly>
+
+          <span class="sr-only">Toggle between light and dark mode</span>
         </button>
       </li>
     </ul>
