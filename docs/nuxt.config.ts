@@ -1,10 +1,9 @@
-import tailwindcss from '@tailwindcss/vite'
-
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/fonts',
     '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     '../src/module',
   ],
@@ -17,7 +16,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ['~/assets/css/main.css'],
   vue: {
     compilerOptions: {
       isCustomElement: tag => tag.startsWith('swiper-'),
@@ -39,9 +37,6 @@ export default defineNuxtConfig({
     },
   },
   compatibilityDate: '2025-07-04',
-  vite: {
-    plugins: [tailwindcss()],
-  },
   bootstrapIcons: {
     showList: true,
   },

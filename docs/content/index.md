@@ -11,11 +11,9 @@ Run the following command to add the module to your project:
 $ npx nuxi@latest module add nuxt-bootstrap-icons
 ```
 
-Congratulations 🎉, you have successfully added the module to your project and can now browser [**bootstrap-icons**](https://icons.getbootstrap.com){.font-cursive} for use in your project
+Congratulations 🎉. You have successfully added the module to your project and can now browse [**bootstrap-icons**](https://icons.getbootstrap.com){.font-cursive.underline} for icons to use.
 
 ## Usage
-
-This module registers a component `BootstrapIcon` by default which can then be used in your project as shown below:
 
 ```vue [YourComponent]
 <BootstrapIcon name="alarm-fill" />
@@ -53,8 +51,13 @@ export default defineNuxtConfig({
 
 **Default value:** `false`
 
-This key toggles whether a virtual file containing a list of all the icons name should be registered.
+This key toggles whether a virtual file containing a list of all the icons would be registered.
 
-The virtual file can be imported from `#build/nuxt-bootstrap-icons.json`
+The snippet below shows how to use the virtual file:
 
+```vue
+<script lang="ts" setup>
+import iconList from '#bootstrap-icons'
+</script>
+```
 ::

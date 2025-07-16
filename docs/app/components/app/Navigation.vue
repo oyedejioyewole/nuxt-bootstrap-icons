@@ -22,14 +22,14 @@ const { data: latestRelease } = await useFetch<{ name: string, html_url: string 
           />
         </svg>
 
-        <span class="lg:inline-block hidden">nuxt-bootstrap-icons</span>
+        <span class="min-lg:inline-block hidden">nuxt-bootstrap-icons</span>
       </NuxtLink>
 
       <!-- Latest release badge -->
       <NuxtLink
         v-if="latestRelease"
         :to="latestRelease.html_url"
-        class="hover:opacity-70 transition"
+        class="hover:opacity-70 transition-opacity"
         target="_blank"
       >
         <ProseCode>
@@ -39,7 +39,7 @@ const { data: latestRelease } = await useFetch<{ name: string, html_url: string 
     </div>
 
     <!-- Navigation items -->
-    <ul class="inline-flex items-center gap-x-8 text-lg md:text-xl">
+    <ul class="inline-flex items-center gap-x-8 text-lg">
       <li>
         <button
           class="cursor-pointer hover:opacity-70 transition-opacity"
@@ -57,30 +57,6 @@ const { data: latestRelease } = await useFetch<{ name: string, html_url: string 
             </template>
           </ClientOnly>
         </button>
-      </li>
-
-      <li>
-        <NuxtLink
-          to="https://icons.getbootstrap.com"
-          target="_blank"
-          class="hover:opacity-70 transition-opacity"
-        >
-          <BootstrapIcon
-            name="bootstrap-fill"
-          />
-        </NuxtLink>
-      </li>
-
-      <li>
-        <NuxtLink
-          to="https://github.com/oyedejioyewole/nuxt-bootstrap-icons"
-          target="_blank"
-          class="hover:opacity-70 transition-opacity"
-        >
-          <BootstrapIcon
-            name="github"
-          />
-        </NuxtLink>
       </li>
     </ul>
   </nav>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-primary-200/50 dark:bg-primary-800/50 space-y-4 rounded-lg px-4 py-2 md:max-w-1/2"
+    class="bg-primary-100 border dark:bg-primary-900 space-y-4 rounded-lg px-4 py-2 min-lg:w-fit max-w-full"
   >
     <p class="inline-flex w-full items-center justify-between text-sm">
       <span class="font-bold">{{ $props.language }}</span>
@@ -8,7 +8,7 @@
     </p>
 
     <pre
-      class="text-sm overflow-x-scroll"
+      class="text-sm overflow-x-auto"
       :class="$props.class"
     ><slot /></pre>
   </div>

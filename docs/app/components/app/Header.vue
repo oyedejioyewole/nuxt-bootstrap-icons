@@ -4,30 +4,23 @@ const features = [
   'Typescript support.',
   'An importable list of all the icons in bootstrap-icons.',
 ]
-
-function openDocumentation() {
-  const dialog = document.querySelector('dialog')
-  if (!dialog) return
-
-  dialog.showModal()
-}
 </script>
 
 <template>
   <header
-    class="flex h-[calc(100vh_-_74px)] flex-col-reverse justify-center gap-y-10 lg:flex-row lg:justify-between "
+    class="flex max-xs:h-[calc(100vh_-_64px)] min-md:h-[calc(100vh_-_96px)] flex-col-reverse justify-center min-lg:flex-row min-lg:justify-around gap-y-8 max-lg:w-9/10 max-lg:mx-auto"
   >
-    <div class="place-self-center space-y-4">
+    <div class="min-lg:place-self-center space-y-4">
       <!-- Tagline -->
       <h1 class="font-serif text-2xl xs:text-4xl font-bold">
         Bootstrap Icons meets Nuxt
       </h1>
 
       <!-- Description -->
-      <p class="text-balance xs:text-base text-sm">
-        This is an integration to implement
-        <span class="font-bold">bootstrap-icons</span> in your Nuxt
-        project.
+      <p class="xs:text-base text-sm">
+        An easier way of using <span
+          class="font-bold underline underline-offset-4 font-cursive"
+        >bootstrap-icons</span> in your Nuxt project!
       </p>
 
       <!-- Feature list -->
@@ -42,17 +35,23 @@ function openDocumentation() {
         </li>
       </ul>
 
-      <UiButton
-        icon="box-arrow-up-right"
-        @click="openDocumentation"
-      >
-        Open documentation
-      </UiButton>
+      <div class="flex flex-wrap gap-4">
+        <UiButton icon="book">
+          Get started
+        </UiButton>
+
+        <UiButton
+          icon="github"
+          variant="accent"
+        >
+          View project
+        </UiButton>
+      </div>
     </div>
 
     <!-- Icon display -->
     <div
-      class="flex flex-col lg:flex-row gap-4 basis-1/2 xl:basis-1/3"
+      class="flex flex-col min-lg:flex-row gap-2.5 basis-3/10"
     >
       <AppIconSlide />
     </div>

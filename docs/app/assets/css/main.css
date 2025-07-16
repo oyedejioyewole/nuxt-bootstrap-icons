@@ -2,29 +2,11 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-body,
-dialog {
+body {
   @apply bg-primary-50 dark:bg-primary-950 text-primary-900 dark:text-primary-100;
 }
 
-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.7);
-}
-
 @theme {
-  /* Animations */
-  --animate-scale: scale 6s infinite ease-in-out;
-
-  @keyframes scale {
-    0%,
-    100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-  }
-
   /* Colors */
   --color-primary-50: #fbf5ff;
   --color-primary-100: #f8ebff;

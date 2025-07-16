@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import iconList from '#build/nuxt-bootstrap-icons.json'
+import iconList from '#bootstrap-icons'
 
 const pickIcons = (max: number) => (iconList.toSorted(() => Math.random() - 0.5).slice(0, max))
 
@@ -25,7 +25,7 @@ const { pause, resume } = useIntervalFn(refresh, 2000)
       :key="parentIndex"
       :autoplay="{ pauseOnMouseEnter: true, reverseDirection: parentIndex === 1 }"
       :breakpoints="{ 1024: { direction: 'vertical' } }"
-      :class="{ 'lg:py-12': parentIndex === 1, 'lg:py-4': parentIndex !== 1, 'hidden lg:flex': parentIndex === 2 }"
+      :class="{ 'min-lg:py-12': parentIndex === 1, 'min-lg:py-4': parentIndex !== 1, 'hidden min-lg:flex': parentIndex === 2 }"
       :data-swiper-index="parentIndex"
       class="w-full h-full"
       loop="true"
@@ -38,11 +38,11 @@ const { pause, resume } = useIntervalFn(refresh, 2000)
         v-for="(entry,
                 childIndex) in child"
         :key="`${parentIndex}-${childIndex}`"
-        class="bg-primary-200/50 dark:bg-primary-800/50 rounded-lg hover:border h-full grid place-items-center"
+        class="bg-primary-200 dark:bg-primary-800 rounded-lg grid place-items-center"
       >
         <BootstrapIcon
           :name="entry"
-          class="text-2xl xs:text-3xl"
+          class="text-xl xs:text-3xl"
         />
       </swiper-slide>
     </swiper-container>
@@ -52,12 +52,12 @@ const { pause, resume } = useIntervalFn(refresh, 2000)
         v-for="parentIndex in icons?.length"
         :key="parentIndex"
         class="w-full h-full flex lg:flex-col justify-between gap-2.5"
-        :class="{ 'lg:py-12': parentIndex === 2, 'lg:py-4': parentIndex !== 2, 'hidden lg:flex': parentIndex === 3 }"
+        :class="{ 'min-lg:py-12': parentIndex === 2, 'min-lg:py-4': parentIndex !== 2, 'hidden min-lg:flex': parentIndex === 3 }"
       >
         <div
           v-for="childIndex in icons?.length"
           :key="`${parentIndex}-${childIndex}`"
-          class="bg-primary-200/50 w-full h-full rounded-lg"
+          class="bg-primary-200 dark:bg-primary-800 w-full h-full rounded-lg"
         />
       </div>
     </template>
