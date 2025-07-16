@@ -20,7 +20,7 @@ export interface ModuleOptions {
 
   /**
    * This key toggles whether a virtual file containing a list of all the icons name should be registered.
-   * The virtual file can be imported from `#build/nuxt-bootstrap-icons.json`
+   * The virtual file can be imported from `#bootstrap-icons`
    *
    * @default false
    */
@@ -40,7 +40,7 @@ export default defineNuxtModule<ModuleOptions>({
     prefix: 'bootstrap-icon',
     showList: false,
   },
-  async setup(options) {
+  async setup(options, nuxt) {
     const prefix = kebabCase(options.prefix)
 
     const { resolve, resolvePath } = createResolver(import.meta.url)
@@ -73,12 +73,15 @@ export default defineNuxtModule<ModuleOptions>({
      * If `options.showList` is enabled, register a
      * template .json file (list of icon names)
      */
-    if (options.showList)
-      addTemplate({
+    if (options.showList) {
+      const iconList = addTemplate({
         filename: 'nuxt-bootstrap-icons.json',
         getContents: () => JSON.stringify(icons),
         write: true,
       })
+
+      nuxt.options.alias['#bootstrap-icons'] = iconList.dst
+    }
 
     addTypeTemplate({
       filename: 'types/nuxt-bootstrap-icons.d.ts',
