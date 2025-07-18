@@ -54,14 +54,11 @@ export default defineNuxtModule<ModuleOptions>({
       typing: resolve('./runtime/_types.d.ts'),
     }
 
-    const icons = readdirSync(path.icons).reduce(
-      (accumulator, current) => {
-        const { name: filename } = parse(current)
-        accumulator.push(filename)
-
-        return accumulator
+    const iconList = readdirSync(path.icons).map(
+      (icon) => {
+        const { name: filename } = parse(icon)
+        return filename
       },
-      [] as string[],
     )
 
     addComponent({
@@ -74,13 +71,13 @@ export default defineNuxtModule<ModuleOptions>({
      * template .json file (list of icon names)
      */
     if (options.showList) {
-      const iconList = addTemplate({
+      const iconListTemplate = addTemplate({
         filename: 'nuxt-bootstrap-icons.json',
-        getContents: () => JSON.stringify(icons),
+        getContents: () => JSON.stringify(iconList),
         write: true,
       })
 
-      nuxt.options.alias['#bootstrap-icons'] = iconList.dst
+      nuxt.options.alias['#bootstrap-icons'] = iconListTemplate.dst
     }
 
     addTypeTemplate({
