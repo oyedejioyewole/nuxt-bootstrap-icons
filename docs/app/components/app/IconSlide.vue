@@ -42,7 +42,7 @@ const { pause, resume } = useIntervalFn(refresh, 2000)
       >
         <BootstrapIcon
           :name="entry"
-          class="text-xl xs:text-3xl"
+          class="text-2xl min-xs:text-3xl"
         />
       </swiper-slide>
     </swiper-container>

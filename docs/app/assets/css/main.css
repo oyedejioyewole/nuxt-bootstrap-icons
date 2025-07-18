@@ -2,10 +2,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-body {
-  @apply bg-primary-50 dark:bg-primary-950 text-primary-900 dark:text-primary-100;
-}
-
 @theme {
   /* Colors */
   --color-primary-50: #fbf5ff;

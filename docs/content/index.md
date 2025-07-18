@@ -19,6 +19,8 @@ Congratulations 🎉. You have successfully added the module to your project and
 <BootstrapIcon name="alarm-fill" />
 ```
 
+**Note:** You can choose between `PascalCase` and `kebab-case` when using the component.
+
 ## Configuration
 
 You can configure this module using the `bootstrapIcons` key in the `nuxt.config`
