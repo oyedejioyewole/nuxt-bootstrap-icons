@@ -20,7 +20,7 @@ useHead({ title: data.value.title })
     >
       <ContentRenderer
         :value="data"
-        class="space-y-4 basis-auto"
+        class="space-y-4"
       />
     </section>
   </NuxtLayout>

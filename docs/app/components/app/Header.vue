@@ -8,7 +8,7 @@ const features = [
 
 <template>
   <header
-    class="flex max-xs:h-[calc(100vh_-_64px)] min-lg:h-[calc(100vh_-_96px)] flex-col-reverse justify-center min-lg:flex-row min-lg:justify-around gap-y-8 max-lg:w-9/10 max-lg:mx-auto"
+    class="flex max-lg:h-[calc(100vh_-_64px)] min-lg:h-[calc(100vh_-_96px)] max-lg:flex-col-reverse max-lg:justify-center min-lg:flex-row min-lg:justify-around gap-y-8 max-lg:w-9/10 max-lg:mx-auto"
   >
     <div class="min-lg:place-self-center space-y-4">
       <!-- Tagline -->
@@ -57,7 +57,7 @@ const features = [
 
     <!-- Icon display -->
     <div
-      class="flex flex-col min-lg:flex-row gap-2.5 basis-4/10 min-lg:basis-3/10"
+      class="flex flex-col min-lg:flex-row gap-2.5 basis-3/10 min-lg:aspect-[9/16]"
     >
       <AppIconSlide />
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-primary-200 dark:bg-primary-800 space-y-4 rounded-lg px-4 py-2 min-md:w-fit max-w-full font-bold"
+    class="bg-primary-200 dark:bg-primary-800 space-y-4 rounded-lg px-4 py-2 min-md:w-fit max-md:max-w-full font-bold"
   >
     <p class="inline-flex w-full items-center justify-between text-sm">
       {{ $props.language }}
