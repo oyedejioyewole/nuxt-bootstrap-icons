@@ -1,5 +1,3 @@
-import { readdirSync } from 'node:fs'
-import { dirname, parse } from 'node:path'
 import {
   addComponent,
   addTemplate,
@@ -8,6 +6,7 @@ import {
   defineNuxtModule,
 } from '@nuxt/kit'
 import { kebabCase } from 'change-case'
+import bootstrapIcons from 'bootstrap-icons/font/bootstrap-icons.json'
 
 //  Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -41,48 +40,33 @@ export default defineNuxtModule<ModuleOptions>({
     showList: false,
   },
   async setup(options, nuxt) {
-    const prefix = kebabCase(options.prefix)
-
-    const { resolve, resolvePath } = createResolver(import.meta.url)
-
-    const path = {
-      icons: resolve(
-        dirname(await resolvePath('bootstrap-icons/package.json')),
-        'icons',
-      ),
-      component: resolve('./runtime/components/BootstrapIcon.vue'),
-      typing: resolve('./runtime/_types.d.ts'),
-    }
-
-    const iconList = readdirSync(path.icons).map(
-      (icon) => {
-        const { name: filename } = parse(icon)
-        return filename
-      },
-    )
+    const { resolve } = createResolver(import.meta.url)
 
     addComponent({
-      filePath: path.component,
-      name: prefix,
+      filePath: resolve('./runtime/components/BootstrapIcon.vue'),
+      name: kebabCase(options.prefix),
     })
 
     /**
-     * If `options.showList` is enabled, register a
-     * template .json file (list of icon names)
+     * If `options.showList` is enabled, register a virtual file
+     * containing a list of icons then create an alias to the file.
      */
     if (options.showList) {
       const iconListTemplate = addTemplate({
         filename: 'nuxt-bootstrap-icons.json',
-        getContents: () => JSON.stringify(iconList),
+        getContents: () => JSON.stringify(Object.keys(bootstrapIcons)),
         write: true,
       })
 
+      // TODO: why are file extensions removed when alias has been registered?
       nuxt.options.alias['#bootstrap-icons'] = iconListTemplate.dst
     }
 
-    addTypeTemplate({
+    const typeTemplate = addTypeTemplate({
       filename: 'types/nuxt-bootstrap-icons.d.ts',
-      src: path.typing,
+      src: resolve('./runtime/types.d.ts'),
     })
+
+    nuxt.options.alias['#bootstrap-icons/types'] = typeTemplate.dst
   },
 })

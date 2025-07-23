@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
 import { computed } from 'vue'
+import type { BootstrapIconName } from '../types'
 
 const props = defineProps<{
-  name: Record<BootstrapIcons, boolean> | BootstrapIcons
+  name: Record<BootstrapIconName, boolean> | BootstrapIconName
 }>()
 
 const icon
