@@ -5,8 +5,8 @@ import {
   createResolver,
   defineNuxtModule,
 } from '@nuxt/kit'
-import { kebabCase } from 'change-case'
 import bootstrapIcons from 'bootstrap-icons/font/bootstrap-icons.json'
+import { kebabCase } from 'change-case'
 
 //  Module options TypeScript interface definition
 export interface ModuleOptions {
