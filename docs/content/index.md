@@ -21,6 +21,12 @@ Congratulations 🎉. You have successfully added the module to your project and
 
 **Note:** You can choose between `PascalCase` and `kebab-case` when using the component.
 
+If you're interested in using the types provided by the module
+
+```ts
+import type { BootstrapIconName } from '#bootstrap-icons/types'
+```
+
 ## Configuration
 
 You can configure this module using the `bootstrapIcons` key in the `nuxt.config`

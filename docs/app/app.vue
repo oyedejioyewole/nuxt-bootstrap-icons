@@ -1,9 +1,27 @@
+<script lang="ts" setup>
+const route = useRoute()
+const { data } = await useAsyncData('content', () => queryCollection('content').path(route.path).first(), { watch: [route] })
+
+if (!data.value) throw createError({
+  statusCode: 404,
+  statusMessage: `Couldn't find page for ${route.path}`,
+})
+
+useHead({ title: data.value.title })
+</script>
+
 <template>
-  <Html lang="en">
-    <Body class="bg-primary-50 dark:bg-primary-950 text-primary-900 dark:text-primary-100">
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
-    </Body>
-  </Html>
+  <NuxtLayout>
+    <AppHeader />
+
+    <section
+      v-if="data"
+      class="min-h-screen w-9/10 mx-auto"
+    >
+      <ContentRenderer
+        :value="data"
+        class="space-y-4 basis-auto"
+      />
+    </section>
+  </NuxtLayout>
 </template>

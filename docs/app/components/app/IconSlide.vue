@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import iconList from '#bootstrap-icons'
+import type { BootstrapIconName } from '#bootstrap-icons/types'
 
-const pickIcons = (max: number) => (iconList.toSorted(() => Math.random() - 0.5).slice(0, max))
+const pickIcons = (max: number) => (iconList.toSorted(() => Math.random() - 0.5).slice(0, max)) as BootstrapIconName[]
 
 const { data: icons, refresh } = await useAsyncData('icons', async () => {
   const parentArray = pickIcons(12)
@@ -42,7 +43,7 @@ const { pause, resume } = useIntervalFn(refresh, 2000)
       >
         <BootstrapIcon
           :name="entry"
-          class="text-2xl min-xs:text-3xl"
+          class="text-2xl"
         />
       </swiper-slide>
     </swiper-container>
