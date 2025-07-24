@@ -30,7 +30,7 @@
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare docs",
     "lint": "eslint . --fix",
     "prepack": "nuxt-module-build build",
-    "release": "pnpm test && changelogen --release --no-output --push",
+    "release": "pnpm test && changelogen --no-output --push --release",
     "test": "vitest run",
     "test:watch": "vitest watch",
     "test:types": "vue-tsc --noEmit"
