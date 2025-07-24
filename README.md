@@ -19,6 +19,12 @@ npx nuxi@latest module add nuxt-bootstrap-icons
 
 That's it! You can now use `nuxt-bootstrap-icons` in your Nuxt app ✨
 
+## Usage
+
+```vue
+<BootstrapIcon name="alarm-fill" />
+```
+
 ## Resources
 
 1. **Documentation**: <https://nuxt-bootstrap-icons.vercel.app>
