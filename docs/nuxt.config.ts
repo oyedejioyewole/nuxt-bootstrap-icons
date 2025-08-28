@@ -1,28 +1,12 @@
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/content',
-    '@nuxt/fonts',
-    '@nuxtjs/color-mode',
-    '@nuxtjs/tailwindcss',
-    '@vueuse/nuxt',
-    '../src/module',
-  ],
-  devtools: { enabled: true },
-  app: {
-    head: {
-      titleTemplate: '%s · nuxt-bootstrap-icons',
-      link: [
-        { rel: 'icon', href: 'favicon.svg' },
-      ],
-    },
-  },
+  extends: [import.meta.env.THEME_DIRECTORY ?? ['github:oyedejioyewole/nuxt-pastel-docs', { install: true }]],
   vue: {
     compilerOptions: {
       isCustomElement: tag => tag.startsWith('swiper-'),
     },
   },
-  colorMode: {
-    classSuffix: '',
+  site: {
+    url: 'https://nuxt-bootstrap-icons.vercel.app',
   },
   content: {
     build: {
@@ -38,6 +22,6 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2025-07-04',
   bootstrapIcons: {
-    showList: true,
+    componentName: 'ui-icon',
   },
 })

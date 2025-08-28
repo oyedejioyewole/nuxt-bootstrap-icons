@@ -10,16 +10,9 @@
   },
   "dependencies": {
     "@nuxt/content": "3.6.3",
-    "@nuxt/fonts": "0.11.4",
-    "@nuxtjs/color-mode": "3.5.2",
-    "@nuxtjs/tailwindcss": "7.0.0-beta.0",
     "nuxt": "^4.0.0",
     "swiper": "^11.2.10",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
-  },
-  "devDependencies": {
-    "@vueuse/core": "^13.5.0",
-    "@vueuse/nuxt": "^13.5.0"
   }
 }

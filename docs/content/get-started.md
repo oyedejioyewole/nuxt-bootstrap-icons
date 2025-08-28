@@ -1,0 +1,150 @@
+---
+title: Get started
+description: This page would guide you through using this module.
+displayToc: true
+---
+
+## Setup
+
+Run the following command to add the module to your project:
+
+```bash [>_]
+$ npx nuxi@latest module add nuxt-bootstrap-icons
+```
+
+Congratulations 🎉. You have successfully added the module to your project and can now browse [**icon library**](https://icons.getbootstrap.com)
+
+**Note:** This module would add a little bit of an overhead in the development and production environments.
+
+**Why?** Well, this module loads :IconCount icons globally as async chunks with no prefetching/preloading — I might add. No further explanation, that's all.
+
+## Usage
+
+I want to read about the
+
+::UiTabs{:tabs='["component", "types", "utilities"]'}
+
+#tab-1
+```vue [YourComponent]
+<BootstrapIcon name="sun" />
+```
+
+You can use the props below to customize how the icon being rendered
+
+::UiTabs{:tabs='["name", "color", "size"]'}
+
+#tab-1
+Choose what icon to render. You can find them in the [icon library](https://icons.getboostrap.com)
+
+```vue [YourComponent]
+<BootstrapIcon name="moon-stars" />
+```
+
+You could also dynamically render an icon based on conditions, i.e;
+
+```vue [YourComponent]
+<BootstrapIcon :name="{ 'moon-stars': isLightModeToggled, 'sun': !isLightModeToggled }" />
+```
+
+It's preferrable if there is only one key-value pair that's truthy at all times, else the component uses `.find()` to get the first truthy match.
+
+**Note:** Doing this preloads all the keys of the `name` prop object (to load times faster).
+
+You could also extend the component with custom attributes utilizing the `<slot />` element provided within the runtime component.
+
+```vue [YourComponent]
+<BootstrapIcon name="moon-stars">
+  <style> /* Your styling goes here */ </style>
+</BootstrapIcon>
+```
+
+#tab-2
+Choose icon stroke/fill color. It can be any CSS color string, including **_hex, rgb, rgba, hsl, hsla, named colors,_**{.font-cursive} or the special **_currentColor_**{.font-cursive} variable.
+
+```vue
+<BootstrapIcon color="#eee" />
+```
+
+#tab-3
+Choose icon height & width, which must be a number.
+
+```vue
+<BootstrapIcon :size="24" />
+```
+
+::
+
+#tab-2
+
+This modules exposes the following types during runtime
+
+```ts
+import type { BootstrapIconName } from '#bootstrap-icons/types'
+```
+
+#tab-3
+
+This module exposes the following utility functions:
+
+::UiTabs{:tabs='[".getIconList()", ".getIconMap()"]'}
+
+#tab-1
+This function returns an array of icons available in the [icon library](https://phosphoricons.com)
+
+```vue [YourComponent]
+<script lang="ts" setup>
+const icons = getIconList()
+
+console.log(icons) // [ ... ]
+</script>
+```
+
+#tab-2
+This function returns the icon map of registered icons to their runtime components
+
+```vue [YourComponent]
+<script lang="ts" setup>
+const iconMap = getIconMap() // { ... }
+
+// Usage
+const Icon = resolveComponent(iconMap['icon-name'])
+</script>
+```
+
+This is also the preferable method if you want to `preload` icons before displaying them.
+
+You do this using the [preloadComponents](https://nuxt.com/docs/4.x/api/utils/preload-components) utility provided by the `Nuxt` team.
+
+```vue [YourComponent]
+<script lang="ts" setup>
+await preloadComponents(iconMap['icon-name'])
+</script>
+```
+
+**Tip:** Maybe pair this logic with [@formkit/auto-animate](https://auto-animate.formkit.com) for smooth transitions whenever the DOM changes
+
+::
+
+::
+
+## Configuration
+
+You can configure the module using the `bootstrapIcons` key in the `nuxt.config`
+
+::UiTabs{:tabs='["componentName"]'}
+
+#tab-1
+
+This key allows you to set the name of the component registered by the module.
+
+**Default:** `bootstrap-icon`
+
+```ts [nuxt.config]
+export default defineNuxtConfig({
+  bootstrapIcons: {
+    componentName: "bi",
+  },
+});
+```
+
+::

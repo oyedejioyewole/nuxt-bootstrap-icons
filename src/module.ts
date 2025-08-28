@@ -1,34 +1,31 @@
+import { name as packageName } from '../package.json'
+
 import {
   addComponent,
+  addImportsSources,
+  addPluginTemplate,
   addTemplate,
   addTypeTemplate,
   createResolver,
   defineNuxtModule,
+  useLogger,
 } from '@nuxt/kit'
-import bootstrapIcons from 'bootstrap-icons/font/bootstrap-icons.json'
-import { kebabCase } from 'change-case'
+import { kebabCase, pascalCase } from 'change-case'
+import { readFile } from 'node:fs/promises'
 
 //  Module options TypeScript interface definition
 export interface ModuleOptions {
   /**
-   * This key allows you to set the prefix for the component registered by the module.
+   * This key allows you to set the name of the registered component.
    *
    * @default "bootstrap-icon"
    */
-  prefix: string
-
-  /**
-   * This key toggles whether a virtual file containing a list of all the icons name should be registered.
-   * The virtual file can be imported from `#bootstrap-icons`
-   *
-   * @default false
-   */
-  showList: boolean
+  componentName: string
 }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'nuxt-bootstrap-icons',
+    name: packageName,
     configKey: 'bootstrapIcons',
     compatibility: {
       nuxt: '>=3.0.0',
@@ -36,37 +33,96 @@ export default defineNuxtModule<ModuleOptions>({
   },
   //  Default configuration options of the Nuxt module
   defaults: {
-    prefix: 'bootstrap-icon',
-    showList: false,
+    componentName: 'bootstrap-icon',
   },
   async setup(options, nuxt) {
-    const { resolve } = createResolver(import.meta.url)
+    const { resolve, resolvePath } = createResolver(import.meta.url)
+    const logger = useLogger(packageName)
+
+    addImportsSources({
+      from: resolve('./runtime/utils/icons.ts'),
+      imports: ['getIconList', 'getIconMap'],
+    })
 
     addComponent({
       filePath: resolve('./runtime/components/BootstrapIcon.vue'),
-      name: kebabCase(options.prefix),
+      name: kebabCase(options.componentName),
     })
 
-    /**
-     * If `options.showList` is enabled, register a virtual file
-     * containing a list of icons then create an alias to the file.
-     */
-    if (options.showList) {
-      const iconListTemplate = addTemplate({
-        filename: 'nuxt-bootstrap-icons.json',
-        getContents: () => JSON.stringify(Object.keys(bootstrapIcons)),
-        write: true,
-      })
-
-      // TODO: why are file extensions removed when alias has been registered?
-      nuxt.options.alias['#bootstrap-icons'] = iconListTemplate.dst
-    }
-
+    // Create module types and its alias
     const typeTemplate = addTypeTemplate({
-      filename: 'types/nuxt-bootstrap-icons.d.ts',
+      filename: `types/${packageName}.d.ts`,
       src: resolve('./runtime/types.d.ts'),
     })
-
     nuxt.options.alias['#bootstrap-icons/types'] = typeTemplate.dst
+
+    const patternToGetSVGOpeningTag = /<svg[^>]*>/
+    const patternToGetIconNameAndPathChild = /<symbol[^>]*id=["']([^"']+)["'][^>]*>(.*?)<\/symbol>/g
+
+    const iconsSource = await resolvePath('bootstrap-icons/bootstrap-icons.svg')
+    const iconsBuffer = await readFile(iconsSource)
+
+    const svgOpeningTagResults = iconsBuffer.toString().match(patternToGetSVGOpeningTag)
+    const svgOpeningTag = svgOpeningTagResults ? svgOpeningTagResults[0] : ''
+
+    const searchResults = iconsBuffer.toString().matchAll(patternToGetIconNameAndPathChild)
+    const matchedResults = Array.from(searchResults, (result) => {
+      const componentName = pascalCase('bi-' + (result.at(1) ?? '')).replace('_', '')
+      return { name: result.at(1) ?? '', componentName, child: result.at(2) ?? '', path: resolve(nuxt.options.buildDir, `.bootstrap-icons/${componentName}.vue`) }
+    })
+
+    for (const result of matchedResults) {
+      // Write each icon to a component in #build/.bootstrap-icons.
+      addTemplate({
+        filename: `.bootstrap-icons/${result.componentName}.vue`,
+        getContents: () => [
+          `// Provided by ${packageName}`,
+          '<template>',
+          `   ${svgOpeningTag}`,
+          `     ${result.child}`,
+          '   </svg>',
+          '</template>',
+        ].join('\n'),
+        write: true,
+      })
+    }
+
+    // Register a key-value mapping of result.name -> result.componentName
+    const iconMapTemplate = addTemplate({
+      filename: `${packageName}.map.mjs`,
+      getContents: () => [
+        `// Provided by ${packageName}`,
+        'export default {',
+        matchedResults.map(result => `   "${result.name}": "${result.componentName}"`).join(',\n'),
+        '}',
+      ].join('\n'),
+      write: true,
+    })
+    nuxt.options.alias['#bootstrap-icons/map'] = iconMapTemplate.dst
+
+    // Register a plugin to register components globally.
+    addPluginTemplate({
+      filename: `${packageName}.plugin.mjs`,
+      getContents: () => [
+        'import { defineNuxtPlugin } from "#app"',
+        'import { defineAsyncComponent } from "#imports"',
+        '',
+        'export default defineNuxtPlugin((nuxtApp) => {',
+        matchedResults.map(result => `   nuxtApp.vueApp.component('${result.componentName}', defineAsyncComponent(() => import('${result.path}')))`).join('\n'),
+        '})',
+      ].join('\n'),
+    })
+
+    // Update manifest to remove preload/prefetch tags from bundled icons.
+    nuxt.hook('build:manifest', (manifest) => {
+      const iconEntries = Object.entries(manifest).filter(entry => entry[0].includes('.bootstrap-icons'))
+
+      for (const [, iconManifest] of iconEntries) {
+        iconManifest.prefetch = false
+        iconManifest.preload = false
+      }
+    })
+
+    logger.success(`${matchedResults.length} icons have been built (stored in #build) and registered.`)
   },
 })
