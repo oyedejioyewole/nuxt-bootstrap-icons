@@ -4,7 +4,7 @@ import { getIconMap } from '../utils/icons'
 
 const iconMap = getIconMap()
 
-type BootstrapIconName = keyof typeof iconMap
+type BootstrapIconName = keyof ReturnType<typeof getIconMap>
 
 interface BootstrapIconProps {
   name: BootstrapIconName | Partial<Record<BootstrapIconName, boolean>>
