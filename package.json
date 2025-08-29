@@ -47,11 +47,10 @@
     "@nuxt/schema": "^4.0.3",
     "@nuxt/test-utils": "^3.19.2",
     "@types/node": "^24.3.0",
-    "changelogen": "^0.6.2",
     "eslint": "^9.34.0",
     "nuxt": "^4.0.3",
     "release-it": "^19.0.4",
-    "typescript": "~5.8.3",
+    "typescript": "~5.9.2",
     "vitest": "^3.2.4",
     "vue-tsc": "^3.0.6"
   },
