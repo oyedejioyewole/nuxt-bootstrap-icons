@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const { pastelDocsTheme } = useAppConfig();
+const { pastelDocs } = useAppConfig();
 
 useSeoMeta({
   title: "Home",
-  description: pastelDocsTheme.headline,
+  description: pastelDocs.headline,
 });
 </script>
 

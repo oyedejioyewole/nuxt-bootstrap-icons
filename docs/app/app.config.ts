@@ -1,14 +1,14 @@
 export default defineAppConfig({
-  pastelDocsTheme: {
+  pastelDocs: {
     headline: 'Bootstrap Icons meets Nuxt',
     repo: 'oyedejioyewole/nuxt-bootstrap-icons',
     themeColor: '#712cf9',
 
     features: [
       'SSR ready.',
+      'Typescript support.',
       'Performance focused.',
       'Handy utility functions for the icons.',
-      'Typescript support (usable developer experience).',
       'Full compatibility with bootstrap-icons (through SVGs).',
     ],
 
@@ -18,6 +18,7 @@ export default defineAppConfig({
       'link': 'link-45deg',
       'book-open': 'book',
       'github-logo': 'github',
+      'desktop': 'pc-display',
     },
   },
 })
