@@ -10,9 +10,8 @@
   },
   "dependencies": {
     "@nuxt/content": "3.6.3",
-    "nuxt": "^4.0.3",
-    "swiper": "^11.2.10",
-    "vue": "^3.5.20",
+    "nuxt": "^4.1.1",
+    "vue": "^3.5.21",
     "vue-router": "^4.5.1"
   }
 }

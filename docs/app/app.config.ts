@@ -18,7 +18,7 @@ export default defineAppConfig({
       'link': 'link-45deg',
       'book-open': 'book',
       'github-logo': 'github',
-      'desktop': 'pc-display',
+      'desktop': 'tv',
     },
   },
 })
